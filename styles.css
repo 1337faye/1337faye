@@ -1,0 +1,193 @@
+header {
+    background-color: purple;
+  }
+  h1 {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 20px;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400
+  }
+  p {
+      color: rgb(255, 255, 255);
+      text-align: left;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 20px;
+  }
+
+  Body {
+    background-color: black;
+    background-image: url(render3.jpg);
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: top center;
+  }
+  .header {
+  overflow: hidden;
+  background-color: rgb(37, 37, 37);
+  padding: 20px 10px;
+  position: sticky;
+  position: -webkit-sticky;
+  border-radius: 20px;
+}
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 9px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 25px;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-family: stretch;
+  font-weight: bold;
+  position: absolute;
+  left: 3%;
+  color: white;
+}
+
+.header a:hover {
+  background-color: rgb(248, 143, 161);
+  color: rgb(238, 238, 238);
+}
+
+.header a.active {
+  background-color: rgb(70, 70, 70);
+  color: white;
+}
+
+.header-right {
+  float: right;
+  padding-right: 50px;
+  scroll-padding-inline: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 650px) {
+  .header a.active {
+    background-color: rgb(70, 70, 70);
+    color: white;
+  } .header-right {
+    float: none;
+    display: inline-flex;
+
+  } .header a {
+    float: none;
+    display: inline-flex;
+    position: relative;
+    right: -100%
+  }header a.logo {
+    position: relative;
+    left: 50%;
+  }
+
+}
+@font-face {
+  font-family: "stretch";
+  src: url(stretchpro.ttf);
+}
+* {
+font-family: "stretch";
+}
+
+header {
+  background-color: purple;
+}
+h1 {
+  color: rgb(255, 255, 255);
+  text-align: left;
+  padding: 20px;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400
+}
+p {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+Body {
+  background-color: black;
+  background-image: url(render3.jpg);
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top center;
+}
+.footer {
+overflow: hidden;
+background-color: rgb(37, 37, 37);
+position:absolute;
+bottom:0;
+width:100%;
+height:60px;   /* Height of the footer */
+}
+.footer a {
+float: left;
+color: rgb(255, 255, 255);
+text-align: center;
+padding: 9px;
+text-decoration: none;
+font-size: 16px;
+line-height: 25px;
+border-radius: 15px;
+font-family: Arial, Helvetica, sans-serif;
+letter-spacing: 1.5px;
+position: absolute;
+bottom: 0;
+}
+
+.header a.logo {
+font-size: 25px;
+font-family: stretch;
+font-weight: bold;
+position: absolute;
+left: 3%;
+color: white;
+}
+
+.footer a:hover {
+background-color: rgb(248, 143, 161);
+color: rgb(238, 238, 238);
+}
+
+.footer a.active {
+background-color: rgb(70, 70, 70);
+color: white;
+}
+
+.footer-right {
+float: right;
+padding-right: 50px;
+scroll-padding-inline: 10px;
+color: white;
+}
+
+@media screen and (max-width: 650px) {
+.footer a.active {
+  background-color: rgb(70, 70, 70);
+  color: white;
+} .footer-right {
+  float: none;
+  display: inline-flex;
+
+} .footer a {
+  float: none;
+  display: inline-flex;
+  position: relative;
+  right: -100%
+}footer a.logo {
+  position: relative;
+  left: 50%;
+}
+}
