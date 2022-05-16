@@ -1,47 +1,79 @@
+#Buttons {
+  color: black;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border: #000000;
+  float: right;
+  border-radius: 15px;
+}
+#background-video {
+  float: right;
+  object-fit: contain;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  right: -330px;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  transform: rotate(270deg)
+}
 header {
-    background-color: purple;
+    background-color: rgb(255, 255, 255);
   }
   h1 {
-    color: rgb(255, 255, 255);
-    text-align: left;
+    font-size: 5rem;
+    margin-top: 15vh;
+    color: black;
+    text-align: center;
     padding: 20px;
+    margin-right: 400px;
     letter-spacing: 1px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: stretchpro;
     font-weight: 400
+    
+
   }
   p {
-      color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
       text-align: left;
       font-family: Arial, Helvetica, sans-serif;
       padding: 20px;
   }
 
   Body {
-    background-color: black;
-    background-image: url(render3.jpg);
+    background-color: #f4f4f4;
     position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: top center;
   }
+  #Body a {
+    font-family: Arial, Helvetica, sans-serif;
+  }
   .header {
   overflow: hidden;
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(219, 219, 219);
   padding: 20px 10px;
+  opacity: 50%;
   position: sticky;
   position: -webkit-sticky;
-  border-radius: 20px;
+  border-radius: 0px;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .header a {
   float: left;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 9px;
   text-decoration: none;
   font-size: 16px;
   line-height: 25px;
   border-radius: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif ;
   letter-spacing: 1.5px;
 }
 
@@ -51,11 +83,11 @@ header {
   font-weight: bold;
   position: absolute;
   left: 3%;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .header a:hover {
-  background-color: rgb(248, 143, 161);
+  background-color: rgb(50, 50, 50);
   color: rgb(238, 238, 238);
 }
 
@@ -72,6 +104,9 @@ header {
 }
 
 @media screen and (max-width: 650px) {
+  .background-video {
+    display: none;
+  }
   .header a.active {
     background-color: rgb(70, 70, 70);
     color: white;
@@ -116,78 +151,3 @@ p {
     padding: 20px;
 }
 
-Body {
-  background-color: black;
-  background-image: url(render3.jpg);
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: top center;
-}
-.footer {
-overflow: hidden;
-background-color: rgb(37, 37, 37);
-position:absolute;
-bottom:0;
-width:100%;
-height:60px;   /* Height of the footer */
-}
-.footer a {
-float: left;
-color: rgb(255, 255, 255);
-text-align: center;
-padding: 9px;
-text-decoration: none;
-font-size: 16px;
-line-height: 25px;
-border-radius: 15px;
-font-family: Arial, Helvetica, sans-serif;
-letter-spacing: 1.5px;
-position: absolute;
-bottom: 0;
-}
-
-.header a.logo {
-font-size: 25px;
-font-family: stretch;
-font-weight: bold;
-position: absolute;
-left: 3%;
-color: white;
-}
-
-.footer a:hover {
-background-color: rgb(248, 143, 161);
-color: rgb(238, 238, 238);
-}
-
-.footer a.active {
-background-color: rgb(70, 70, 70);
-color: white;
-}
-
-.footer-right {
-float: right;
-padding-right: 50px;
-scroll-padding-inline: 10px;
-color: white;
-}
-
-@media screen and (max-width: 650px) {
-.footer a.active {
-  background-color: rgb(70, 70, 70);
-  color: white;
-} .footer-right {
-  float: none;
-  display: inline-flex;
-
-} .footer a {
-  float: none;
-  display: inline-flex;
-  position: relative;
-  right: -100%
-}footer a.logo {
-  position: relative;
-  left: 50%;
-}
-}
