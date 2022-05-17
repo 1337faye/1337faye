@@ -92,7 +92,7 @@ header {
 }
 
 .header a.active {
-  background-color: rgb(70, 70, 70);
+  background-color: #5F5F5F;
   color: white;
 }
 
@@ -108,7 +108,7 @@ header {
     display: none;
   }
   .header a.active {
-    background-color: rgb(70, 70, 70);
+    background-color: #5F5F5F;
     color: white;
   } .header-right {
     float: none;
