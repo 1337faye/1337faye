@@ -1,7 +1,3 @@
-#part2 {
-  background-color: #000000;
-}
-
 #Buttons {
   color: black;
   text-align: left;
@@ -155,3 +151,10 @@ p {
     padding: 20px;
 }
 
+.part2 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  position: fixed;
+  z-index: 10;
+}
