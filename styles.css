@@ -1,7 +1,3 @@
-#part2 {
-  background-color: #000000;
-}
-
 #Buttons {
   color: black;
   text-align: left;
@@ -12,16 +8,21 @@
 }
 #background-video {
   float: right;
-  object-fit: contain;
+  object-fit: scale-down;
   width: 100vw;
   height: 100vh;
-  position: fixed;
-  right: -25vw;
-  top: 0;
-  bottom: 0;
+  position: relative;
+  display: flexbox;
+  margin-top: -100vh;
+  right: -28vw;
+  bottom: -81vh;
   z-index: -1;
-  overflow: hidden;
+  overflow-x: hidden;
 }
+#background-video:hover {
+  transform: scale(1.5);
+}
+  
 header {
     background-color: rgb(255, 255, 255);
   }
@@ -48,7 +49,7 @@ header {
   Body {
     background-color: #F0F0F0;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     background-size: cover;
     background-position: top center;
   }
@@ -56,7 +57,7 @@ header {
     font-family: Arial, Helvetica, sans-serif;
   }
   .header {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: rgb(219, 219, 219);
   padding: 20px 10px;
   opacity: 50%;
@@ -116,11 +117,11 @@ header {
     color: white;
   } .header-right {
     float: none;
-    display: inline-flex;
+    display: flex;
 
   } .header a {
     float: none;
-    display: inline-flex;
+    display: flex;
     position: relative;
     right: -100%
   }header a.logo {
@@ -155,3 +156,19 @@ p {
     padding: 20px;
 }
 
+.fwhpage2 {
+  display: flex;
+  width: 110vw;
+  margin-left: -100px;
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: #0000005a;
+  position: relative;
+  z-index: 10;
+}
+.fwhpage2 h1 {
+  position: relative;
+  left: 7vw;
+  font-family: stretch;
+  font-size: 8vh;
+}
