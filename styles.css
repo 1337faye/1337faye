@@ -8,16 +8,21 @@
 }
 #background-video {
   float: right;
-  object-fit: contain;
+  object-fit: scale-down;
   width: 100vw;
   height: 100vh;
-  position: fixed;
-  right: -25vw;
-  top: 0vh;
-  bottom: 0vh;
+  position: relative;
+  display: flexbox;
+  margin-top: -100vh;
+  right: -28vw;
+  bottom: -81vh;
   z-index: -1;
   overflow-x: hidden;
 }
+#background-video:hover {
+  transform: scale(1.5);
+}
+  
 header {
     background-color: rgb(255, 255, 255);
   }
@@ -163,7 +168,7 @@ p {
 }
 .fwhpage2 h1 {
   position: relative;
-  left: 10vw;
+  left: 7vw;
   font-family: stretch;
   font-size: 8vh;
 }
