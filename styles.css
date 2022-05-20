@@ -274,7 +274,7 @@ h1 {
 video {
   color: #5F5F5F;
   animation-duration: 3s;
-  animation-name: animate-blur;
+  animation-name: animate-fadeglowgg;
   animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
 }
 #Buttons {
@@ -302,6 +302,9 @@ header {
     background-color: rgb(255, 255, 255);
   }
   h1 {
+    animation-duration: 1.5s;
+    animation-name: animate-blur;
+    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
     font-size: 6vw;
     margin-top: 15v;
     margin-bottom: 60px;
@@ -312,6 +315,8 @@ header {
     letter-spacing: 1px;
     font-family: stretchpro;
     font-weight: 400
+    
+    
 
   }
   p {
@@ -334,15 +339,18 @@ header {
   .header {
   overflow-x: hidden;
   background-color: rgb(219, 219, 219);
-  padding: 20px 10px;
+  filter: blur(50);
+  padding: 4vh 2vw;
   opacity: 50%;
   position: sticky;
   position: -webkit-sticky;
-  border-radius: 0px;
-  margin-top: -10px;
-  margin-left: -10px;
-  margin-right: -10px;
-  
+  height: 7vh;
+  width: 100vw;
+  margin-right: -4vh;
+  margin-top: -3vh;
+  margin-left: -2vh;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
 }
 .header a {
   float: left;
@@ -358,6 +366,7 @@ header {
 }
 
 .header a.logo {
+  padding: 1%;
   font-size: 25px;
   font-family: stretch;
   font-weight: bold;
@@ -458,6 +467,8 @@ img {
   height: 100vh;
   transition: all .9s ease-in-out;
   filter: blur(100);
+  animation-duration: 1.5s;
+  animation-name: animate-blur;
   animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
 }
 img:hover { 
