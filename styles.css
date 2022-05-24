@@ -274,7 +274,7 @@ h1 {
 video {
   color: #5F5F5F;
   animation-duration: 3s;
-  animation-name: animate-fadeglowgg;
+  animation-name: animate-fadeglow;
   animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
 }
 #Buttons {
