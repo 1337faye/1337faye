@@ -5,57 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-
 </head>
 <div>
-    <section class="place-content-center sticky h-0"> 
-        <div class="bg-slate-900/70 text-white p-4 align-center  shadow-2xl overflow-hidden max-w-[100vw]">
+    <div class="sticky w-screen"> 
+        <div class="bg-white dark:bg-slate-900 text-white p-4 align-center  shadow-2xl ">
             <ul class="font-sans flex h-auto">
                 <li>
-                    <img src="img/logo2.png" alt="logo2" class="h-10 ml-[4vw] md:ml-[14vw] pt-2 opacity-75 duration-500 hover:opacity-100">
+                    <img src="img/logo2.png" alt="logo2" class="invisible sm:visible h-10 ml-[4vw] md:ml-[14vw] pt-2 opacity-75 duration-500 hover:opacity-100">
                 </li>
-                <li class="hover:animate-pulse text-white pb-8 ml-1 md:ml-[1vw] pt-2 h-2 transition duration-500 ease-in-out flex-auto order-1 text-2xl font-bold hover:text-gray-300 align-super"><a href="https://github.com/EntityRender/fayesite/blob/main/index.html"> 
+                <li class="hover:animate-pulse text-violet-700 dark:text-white pb-8 ml-1 md:ml-[1vw] pt-2 h-2 transition duration-500 flex-auto order-1 text-2xl font-bold hover:text-slate-900 dark:hover:text-gray-300 align-super"><a class="shadow-2xl" href="https://github.com/EntityRender"> 
                 FAYE</a>
                 </li>
-                <li class="duration-500 font-bold drop-shadow-2xl shadow-2xl text-xs md:text-base lg:text-base flex-2 order-2 align-middle bg-gradient-to-r from-slate-700/25 via-slate-800/50 to-slate-700/30 p-4 rounded-lg hover:scale-110">
-                    CONTACT
+                <li class="duration-500 font-bold drop-shadow-2xl shadow-2xl text-xs md:text-base lg:text-base flex-2 order-2 align-middle bg-slate-700 dark:bg-gradient-to-r from-slate-700/25 via-slate-800/50 to-slate-700/30 p-4 rounded-xl hover:scale-110 hover:text-violet-700 dark:hover:text-violet-300">
+                    <a href="https://twitter.com/1337faye"> CONTACT </a>
                 </li>
-                <li class="duration-500 mr-2 md:md:mr-[15vw] underline-offset-8 text-xs md:text-base lg:text-base flex-3 order-3 ml-[4vw] md:ml-4 font-light align-middle text-violet-400 rounded-full p-4 decoration-[0px] underline hover:decoration-dashed">
-                    ABOUT
+                <li class="duration-500 mr-2 md:md:mr-[15vw] underline-offset-8 text-xs md:text-base lg:text-base flex-3 order-3 ml-[4vw] md:ml-4 align-middle text-violet-700 dark:text-violet-400 rounded-full p-4 decoration-[0px] underline font-bold hover:decoration-dashed">
+                    ABOUT ME
                 </li>
             </ul>
         </div>
-        <div class="h-0.5 bg-slate-400 animate-pulse">
-            
+        <div class="h-0.5 dark:bg-slate-600 animate-pulse bg-slate-900">
         </div>
-    </section>
-</div>
-<body class="overflow-hidden max-w-[100vw]">
-    <div src="https://scx1.b-cdn.net/csz/news/800/2017/theoreticala.jpg" alt=”an artist's rendition of a black hole in space” class="max-w-[100vw] min-h-screen max-h-screen bg-gradient-to-b from-slate-800 to-slate-700 bg-gradient-to-r overflow-hidden">
-        <ul class="flex flex-wrap md:flex-nowrap">
-            <li class="pb-[5vh] md:pt-[25vh] max-w-[100vw] overflow-hidden lg:mt-[2vh] lg:pt-[30vh] text-justify duration-500 lg:text-7xl pt-48 md:pr-12 font-extrabold order-1 text-4xl md:text-3xl text-white md:p-32 p-24 m-auto md:mr-0 highlight hover:text-white/50">
-                WELCOME TO MY <b class="hover:text-white duration-500 text-violet-400">PERSONAL</b> PAGE!
-            </li>
-            <li class="xl:text-4xl text-center order-2 text-xl text-white m-4 pt-4 md:text-2xl font-semibold p-auto pb-6 md:pl-20 md:p-12 sm:mt-[16vh] lg:pt-[12vh] lg:text-3xl lg:p-48 lg:mt-[25vh]">
-                My name is <b class="text-violet-400 hover:text-white duration-500">Faye</b>, I design user interfaces for websites and applications and I'm also a frontend web developer.
-                 I'm currently working on a UI design language named <b class="text-violet-400 hover:text-white duration-500">Helium</b>, click on the button to <b class="text-violet-400 hover:text-white duration-500">Learn more</b>.
-            </li>
-        </ul>
-        <ul class="">
-        <li class="sm:bottom-0 order-3 m-auto text-center p-4 text-2xl rounded-lg text-violet-400 font-bold sm:m-2 sm:p-4 sm:flex-row sm:flex-auto sm:flex-wrap sm:h-24">
-            Learn More
-        </li>
-        </ul>
-        </h>
 
+<div class="bg-slate-100 dark:bg-slate-900 min-h-screen max-h-screen min-w-screen max-w-screen ">
+    <div class="flex-wrap md:flex">
+        <h1 class="max-w-[100vw] min-w-[100vw] overflow-hidden text-justify m-auto font-extrabold text-slate-700 dark:text-white text-4xl p-24 order-1 MEDIUM sm:text-center md:float-left md:pt-[35vh] md:text-7xl">
+            WELCOME TO MY <b class="text-violet-700 dark:text-violet-400  duration-300 hover:dark:text-white hover:text-black animate-pulse">PERSONAL</b> SITE
+        </h1>
+        <a href="https://twitter.com/1337faye" class="text-center inline-block mx-32 duration-500 hover:scale-125 hover:text-violet-400 bg-slate-700 rounded-xl p-4 shadow-2xl sm:m-auto order-2 font-bold text-white dark:text-violet-400">
+            STAY UPDATED
+        </a>
     </div>
+  
 </div>
-
+<div class="h-0.5 bg-slate-600 animate-pulse">
 </div>
-</div>
-<footer>
-<p class="mt-4 text-sm text-center text-slate-900 lg:mt-0 p-4 overflow-hidden">
-    Built by <b class="text-violet-400 hover-text-white duration-500 p-1 ">Faye</b>with <b class="text-violet-400 hover-text-white duration-500 p-1">Helium design</b> & <a href="https://tailwindcss.com/" class="text-violet-400 hover-text-white duration-500 p-1 font-bold">Tailwind CSS</a>
-  </p>
-,
-<body>
