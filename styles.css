@@ -1222,6 +1222,14 @@ video {
     margin-top: -10vh;
   }
 
+  .sm\:mt-\[-20vh\] {
+    margin-top: -20vh;
+  }
+
+  .sm\:mt-\[10vh\] {
+    margin-top: 10vh;
+  }
+
   .sm\:w-48 {
     width: 12rem;
   }
