@@ -3,9 +3,7 @@ module.exports = {
   content: ["index.html"],
   theme: {
     extend: {
-      fontFamily:{
-        'body':'Oxygen Mono'
-      }
+      
     },
   },
   plugins: [],

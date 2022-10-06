@@ -1,25 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+.btn {
+    @apply text-base font-medium rounded-lg p-3;
+  }
+  
+  .btn--primary {
+    @apply bg-sky-500 text-white;
+  }
+  
+  .btn--secondary {
+    @apply bg-slate-100 text-slate-900;
+  }
 
-.custom-shape-divider-top-1662858549 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
-  
-  .custom-shape-divider-top-1662858549 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 66px;
-  }
-  
-  .custom-shape-divider-top-1662858549 .shape-fill {
-    fill: #334155;
-  }
+
 
 
 @tailwind base;
