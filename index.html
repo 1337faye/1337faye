@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+    <script src="onload.js"></script>
+    <link href="styles.css" rel="stylesheet">
     <meta content="Faye - Home" property="og:title" />
     <meta content="My name is Faye, I'm a front-end web developer and graphic designer." property="og:description" />
     <meta content="https://faye.lol" property="og:url" />
@@ -10,7 +12,6 @@
     <meta content="https://faye.lol/img/bg2.png" property="og:image" />
     <meta content="#d000ff" data-react-helmet="true" name="theme-color" />
     <link rel="manifest" href="/site.webmanifest">
-    <link href="styles.css" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
@@ -23,18 +24,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/styles.css" rel="stylesheet">
-  <script src="onload.js"></script>
 </head>
-<spinner class="min-h-screen flex place-content-center">
-    <div class="m-auto w-screen min-h-screen text-white flex place-content-center bg-gradient-to-b bg-cover from-violet-500 via-violet-700 to-slate-800">
-        <div class="flex m-auto h-16 w-16 rounded-full bg-white animate-ping">
+<spinner class="min-h-screen overflow-hidden scroll-m-0 z-40 fixed">
+    <div class="m-auto w-screen min-h-screen overflow-hidden text-white flex place-content-center bg-gradient-to-b bg-cover from-violet-500 via-violet-700 to-slate-800">
+        <div class=" flex m-auto h-16 w-16 rounded-full bg-white animate-ping">
 
         </div>
     </div>
 </spinner>
 <section class=" scroll-smooth max-h-screen min-h-screen overflow-hidden sticky max-w-screen  bg-gradient-to-b bg-cover from-violet-500 via-violet-700 to-slate-800 backdrop-blur-3xl">
 
-    <div class="rounded-none md:rounded-b-3xl bg-gradient-to-r from-slate-800 to bg-slate-900 duration-300 bg-opacity-60 bg-blend-saturation flex">
+    <header class="rounded-none md:rounded-b-3xl bg-gradient-to-r from-slate-800 to bg-slate-900 duration-300 bg-opacity-60 bg-blend-saturation flex">
 <ul class="text-white flex items-center max-w-screen-lg m-auto p-8 my-0 h-16 flex-grow font-bold">
     <li class="duration-500 hover:scale-95 drop-shadow-2xl order-1 font-extrabold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500 flex-grow ">
         FAYE
@@ -55,7 +55,7 @@
     </li>
 </ul>
 
-</div>
+    </header>
 </div>
 
     </div>
@@ -63,7 +63,7 @@
 </div>
 </div>
 
-
+<hero>
     <div class=" flex-col flex-wrap max-w-max order-1 my-16 m-auto z-10">
         <h1 class="duration-500 m-auto font-extrabold lg:w-[70vw] text-center p-8 order-1 inline-block bg-clip-text text-transparent drop-shadow-lg bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">
             I'm a  <a class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">front end</a> website developer and <a class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">graphic designer.</a>
@@ -77,8 +77,9 @@
             </a>
 
         </div>
-        
-    </section>
+    </div>
+</hero>
+</section>
     <div id="section1" class="scroll-smooth p-8 min-h-screen max-h-screen min-w-full max-w-full bg-slate-800 gap-16 md:gap-24 flex flex-wrap flex-shrink items-center m-auto">
         <div class="order-1 m-auto static overflow-hidden border-indigo-500 border-[0.25px] shadow-xl bg-opacity-50 backdrop-blur-xl w-80 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 flex-grow bg-gradient-to-b from-indigo-700 to-indigo-500 rounded-xl">
             <div class="h-10 border-indigo-500 border-[0.25px] bg-indigo-700 m-auto rounded-t-xl flex items-center">
@@ -218,32 +219,32 @@
         </div>
         <div class="flex flex-row flex-wrap w-[30rem] pl-24">
             <div class="text-white p-8 font-mono flex-col items-start">
-                <img src="/Users/23_ayomideayorinde/Documents/Web/img/tailwind-logo.png" class="duration-700 hover:scale-110 shadow-2xl order-1 h-14 w-14 border-2 rounded-xl bg-white p-4">
+                <img loading="lazy" src="https://faye.lol/img/tailwind-logo.png" class="duration-700 hover:scale-110 shadow-2xl order-1 h-14 w-14 border-2 rounded-xl bg-white p-4">
                 <h1 class="order-1 text-center drop-shadow-xl text-xs mt-2">
                     Tailwind
                 </h1>
             </div>
             <div class="text-white p-8 font-mono flex-col items-center">
-                <img href="https://www.javascript.com/" src="/Users/23_ayomideayorinde/Documents/Web/img/javascript-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#f0db4f] border-yellow-300 p-4">
+                <img loading="lazy" href="https://www.javascript.com/" src="https://faye.lol/img/javaScript-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#f0db4f] border-yellow-300 p-4">
                 <h1 class="order-2 text-center m-auto drop-shadow-xl text-xs mt-2">
                     JavaScript
                 </h1>
             </div>
 
             <div class="text-white p-8 font-mono flex-col items-center">
-                <img src="/Users/23_ayomideayorinde/Documents/Web/img/html-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#E44D26] border-[#f05731] p-4">
+                <img loading="lazy" src="https://faye.lol/img/html-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#E44D26] border-[#f05731] p-4">
                 <h1 class="order-2 text-center m-auto drop-shadow-xl text-xs mt-2">
                     HTML
                 </h1>
             </div>
             <div class="text-white p-8 font-mono flex-col items-center">
-                <img src="/Users/23_ayomideayorinde/Documents/Web/img/alpinejs-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#2E3440] border-[#2E3440] p-4">
+                <img loading="lazy" src="https://faye.lol//img/alpinejs-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#2E3440] border-[#2E3440] p-4">
                 <h1 class="order-2 text-center m-auto drop-shadow-xl text-xs mt-2">
                     Alpine
                 </h1>
             </div>
             <div class="text-white p-8 font-mono flex-col items-center">
-                <img src="/Users/23_ayomideayorinde/Documents/Web/img/css-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#214CE5] border-[#214CE5] p-4">
+                <img loading="lazy" src="https://faye.lol/img/css-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#214CE5] border-[#214CE5] p-4">
                 <h1 class="order-2 text-center m-auto drop-shadow-xl text-xs mt-2">
                     CSS
                 </h1>

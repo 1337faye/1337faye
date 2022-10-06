@@ -10,8 +10,28 @@
     @apply bg-slate-100 text-slate-900;
   }
 
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+     }
+}
 
+  header {
+    animation: fadeInAnimation ease 0.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 
+hero {
+  animation: fadeInAnimation ease 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
 @tailwind base;
 @tailwind components;
