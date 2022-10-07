@@ -1,8 +1,9 @@
 <!doctype html>
 <html>
-<head>
-    <script src="onload.js"></script>
+<head></head>
+    <script rel="preload" src="onload.js"></script>
     <link href="styles.css" rel="stylesheet">
+    <script src="colour.js"></script>
     <meta content="Faye - Home" property="og:title" />
     <meta content="My name is Faye, I'm a front-end web developer and graphic designer." property="og:description" />
     <meta content="https://faye.lol" property="og:url" />
@@ -32,11 +33,12 @@
         </div>
     </div>
 </spinner>
-<section class=" scroll-smooth max-h-screen min-h-screen overflow-hidden sticky max-w-screen  bg-gradient-to-b bg-cover from-violet-500 via-violet-700 to-slate-800 backdrop-blur-3xl">
+<section class=" scroll-smooth max-h-screen min-h-screen overflow-hidden sticky max-w-screen bg-no-repeat bg-cover bg-fixed bg-violet-500 bg-[url('/Users/23_ayomideayorinde/Documents/Web/img/bg-web.png')] backdrop-blur-3xl">
 
-    <header class="rounded-none md:rounded-b-3xl bg-gradient-to-r from-slate-800 to bg-slate-900 duration-300 bg-opacity-60 bg-blend-saturation flex">
+<header id="header" class="fixed z-50 w-screen rounded-none md:rounded-b-3xl bg-gradient-to-r from-slate-800 to bg-slate-900 duration-300 bg-opacity-60 bg-blend-saturation flex">
 <ul class="text-white flex items-center max-w-screen-lg m-auto p-8 my-0 h-16 flex-grow font-bold">
-    <li class="duration-500 hover:scale-95 drop-shadow-2xl order-1 font-extrabold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500 flex-grow ">
+    <li class="flex flex-row gap-4 duration-500 hover:scale-95 drop-shadow-2xl order-1 font-extrabold md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500 flex-grow ">
+        <img src="/Users/23_ayomideayorinde/Documents/Web/img/logo.png" class="h-8 w-8">
         FAYE
     </li>
     <li class="line-through pointer-events-none decoration-violet-500 bg-clip-text text-transparent drop-shadow-lg bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 text-xs sm:text-sm md:text-lg order-2 p-4 flex-grow">
@@ -46,9 +48,9 @@
         OTHER PROJECTS
     </li>
     <li class="text-xs sm:text-sm md:text-lg order-4 p-  flex-3  flex-grow">
-        <a href="https://github.com/1337faye" class="hover:animate-pulse bg-clip-text text-transparent drop-shadow-lg bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 hover:animate-" >GITHUB</a>
+        <a href="https://github.com/1337faye" class="bg-clip-text text-transparent drop-shadow-lg bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 hover:animate-" >GITHUB</a>
         <div class="absolute h-3 w-3 rounded-full translate-x-16 top-1">
-            <h1 class="text-[0.5rem] text-white animate-pulse">
+            <h1 class="text-[0.5rem] text-white">
                 NEW!
             </h1>
         </div>
@@ -64,8 +66,8 @@
 </div>
 
 <hero>
-    <div class=" flex-col flex-wrap max-w-max order-1 my-16 m-auto z-10">
-        <h1 class="duration-500 m-auto font-extrabold lg:w-[70vw] text-center p-8 order-1 inline-block bg-clip-text text-transparent drop-shadow-lg bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">
+    <div class=" flex-col flex-wrap max-w-max order-1 my-16 m-auto z-0">
+        <h1 class="mt-16 duration-500 m-auto font-extrabold lg:w-[70vw] text-center p-8 order-1 inline-block bg-clip-text text-transparent drop-shadow-lg bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
             I'm a  <a class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">front end</a> website developer and <a class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">graphic designer.</a>
         </h1>
         <p class="duration-500 px-16 py-0 md:py-4 lg:py-8 font-bold drop-shadow-xl bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 bg-clip-text text-transparent text-center text-sm md:text-sm lg:text-lg">
@@ -80,8 +82,8 @@
     </div>
 </hero>
 </section>
-    <div id="section1" class="scroll-smooth p-8 min-h-screen max-h-screen min-w-full max-w-full bg-slate-800 gap-16 md:gap-24 flex flex-wrap flex-shrink items-center m-auto">
-        <div class="order-1 m-auto static overflow-hidden border-indigo-500 border-[0.25px] shadow-xl bg-opacity-50 backdrop-blur-xl w-80 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 flex-grow bg-gradient-to-b from-indigo-700 to-indigo-500 rounded-xl">
+    <section1 id="section1" style="transition-duration: 1s;" class=" bg-slate-800 shadow-2xl p-8 min-h-screen max-h-screen min-w-full max-w-full gap-16 md:gap-24 flex flex-wrap flex-shrink items-center m-auto">
+        <div id="card1" class="order-1 m-auto border-indigo-500 border-[0.25px] shadow-xl  w-80 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 flex-grow bg-gradient-to-b from-indigo-700 to-indigo-500 rounded-xl">
             <div class="h-10 border-indigo-500 border-[0.25px] bg-indigo-700 m-auto rounded-t-xl flex items-center">
                 <a href="https://en.wikipedia.org/wiki/Traffic_light" class="border-[1px] border-slate-500 rounded-full ml-4 h-4 w-4 bg-red-400 hover:bg-white order-1 duration-200">
                 </a>
@@ -92,7 +94,7 @@
         
                 </a>   
                 <div class="order-4 m-auto text-white">
-                    <h1 class="pointer-events-none font-bold text-transparent h-4 bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 animate-pulse">
+                    <h1 class="pointer-events-none  text-transparent h-4 bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 ">
                         C:\Users\Faye\Tools
                     </h1>
                 </div>
@@ -100,7 +102,7 @@
             
                 <div class="flex flex-row flex-wrap">
                     <div class="text-white p- flex-col items-start">
-                        <h1 class="underline-offset-4 underline drop-shadow-2xl text-sm font-extrabold order-1 text-center rounded-lg px-4 py-2 m-auto text-white md:text-lg lg:text-xl xl:text-2xl">
+                        <h1 class="underline-offset-4 underline text-sm font-extrabold order-1 text-center rounded-lg px-4 py-2 m-auto text-white md:text-lg lg:text-xl xl:text-2xl">
                             RESPONSIVE
                         </h1>
                     
@@ -111,7 +113,7 @@
                 </div>  
             </div>
 
-        <div class="duration-300 xl:-translate-y-8 lg:translate-y-0 order-2 m-auto static overflow-hidden border-indigo-500 border-[0.25px] shadow-xl bg-opacity-50 backdrop-blur-xl w-80 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 flex-grow bg-gradient-to-b from-indigo-600 to-fuchsia-indigo-400 rounded-xl">
+        <div id="card2" class="relative duration-300 order-2 m-auto border-indigo-500 border-[0.25px] w-80 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 flex-grow bg-gradient-to-b from-indigo-600 to-indigo-500 rounded-xl">
             <div class="h-10 border-indigo-500 border-[0.25px] bg-indigo-600 m-auto rounded-t-xl flex items-center">
                 <a href="https://en.wikipedia.org/wiki/Traffic_light" class="border-[1px] border-slate-500 rounded-full ml-4 h-4 w-4 bg-red-400 hover:bg-white order-1 duration-200">
                 </a>
@@ -122,15 +124,15 @@
         
                 </a>   
                 <div class="order-4 m-auto text-white">
-                    <h1 class="pointer-events-none font-bold text-transparent h-4 bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 animate-pulse">
+                    <h1 class="pointer-events-none font-bold text-transparent h-4 bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400">
                         C:\Users\Faye\Tools
                     </h1>
                 </div>
             </div>
-            
+        
                 <div class="flex flex-row flex-wrap">
                     <div class="text-white p- flex-col items-start">
-                        <h1 class="underline-offset-4 underline drop-shadow-2xl text-sm font-extrabold order-1 text-center rounded-lg px-4 py-2 m-auto text-white md:text-lg lg:text-xl xl:text-2xl">
+                        <h1 class="underline-offset-4 underline text-sm font-extrabold order-1 text-center rounded-lg px-4 py-2 m-auto text-white md:text-lg lg:text-xl xl:text-2xl">
                             FAST
                         </h1>
                     
@@ -141,7 +143,7 @@
                 </div>  
             </div>
 
-        <div class="order-3 m-auto static overflow-hidden border-indigo-500 border-[0.25px] shadow-xl bg-opacity-50 backdrop-blur-xl w-80 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 flex-grow bg-gradient-to-b from-indigo-700 to-indigo-500 rounded-xl">
+        <div id="card3" class="order-3 m-auto static overflow-hidden border-indigo-500 border-[0.25px] shadow-xl bg-opacity-50 backdrop-blur-xl w-80 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 flex-grow bg-gradient-to-b from-indigo-700 to-indigo-500 rounded-xl">
                 <div class="h-10 border-indigo-500 border-[0.25px] bg-indigo-700 m-auto rounded-t-xl flex items-center">
                     <a href="https://en.wikipedia.org/wiki/Traffic_light" class="border-[1px] border-slate-500 rounded-full ml-4 h-4 w-4 bg-red-400 hover:bg-white order-1 duration-200">
                     </a>
@@ -152,7 +154,7 @@
             
                     </a>   
                     <div class="order-4 m-auto text-white">
-                        <h1 class="pointer-events-none font-bold text-transparent h-4 bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 animate-pulse">
+                        <h1 class="pointer-events-none font-bold text-transparent h-4 bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400">
                             easter egg I guess
                         </h1>
                     </div>
@@ -160,7 +162,7 @@
                 
                     <div class="flex flex-row flex-wrap">
                         <div class="text-white p- flex-col items-start">
-                            <h1 class="underline-offset-4 underline drop-shadow-2xl text-sm font-extrabold order-1 text-center rounded-lg px-4 py-2 m-auto text-white md:text-lg lg:text-xl xl:text-2xl">
+                            <h1 class="underline-offset-4 text-sm font-extrabold order-1 text-center rounded-lg px-4 py-2 m-auto text-white md:text-lg lg:text-xl xl:text-2xl">
                                 MODERN
                             </h1>
                         
@@ -178,17 +180,17 @@
         </div>
         </div>
         </h1>
-    </div>
+    </section1>
     <div class="flex min-h-screen max-h-screen bg-gradient-to-b from-slate-800 via-fuschia-500 to-violet-700 overflow-hidden">
     <div class="flex flex-row flex-wrap max-w-max m-auto items-center flex-grow overflow-hidden">
     <div class="flex flex-col place-content-center text-center order-1 lg:w-[50vw] p-12">
-        <h1 class="hover:animate-pulse z-0 mb-12 order-1 text-2xl md:text-5xl lg:text-5xl xl:text-8xl font-extrabold drop-shadow-xl bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 bg-clip-text text-transparent">
+        <h1 class="mb-12 order-1 text-2xl md:text-5xl lg:text-5xl xl:text-8xl font-extrabold bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 bg-clip-text text-transparent">
             Flexible web development
         </h1>
-        <p class="drop-shadow-xl order-2 text-sm md:text-lg lg:text-xl text-transparent bg-clip-text font-bold z-0 bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">
+        <p class="order-2 text-sm md:text-lg lg:text-xl text-transparent bg-clip-text font-bold bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">
             I use a variety of tools which allow me to be flexible in the way I develop my sites, I develop anything from simple landing pages to complex digital portfolios designed to put you in the spotlight.
     </div>
-<div style="transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(10deg) rotateZ(0deg) translateX(0px) translateY(-10px) translateZ(0px) skewX(0deg) skewY(0deg); " class="m-auto order-2 static overflow-hidden border-indigo-500 border-[0.25px] shadow-xl bg-opacity-50 backdrop-blur-xl max-w-[30rem] min-h-[25rem] max-h-[30rem] bg-gradient-to-b from-indigo-700 to-indigo-500 rounded-xl">
+<div class="m-auto order-2 static overflow-hidden border-indigo-500 border-[0.25px] shadow-xl bg-opacity-50 backdrop-blur-xl max-w-[30rem] min-h-[25rem] max-h-[30rem] bg-gradient-to-b from-indigo-700 to-indigo-500 rounded-xl">
     <div class="h-10 border-indigo-500 border-[0.25px] bg-indigo-700 m-auto rounded-t-xl flex items-center">
         <a href="https://en.wikipedia.org/wiki/Traffic_light" class="border-[1px] border-slate-500 rounded-full ml-4 h-4 w-4 bg-red-400 hover:bg-white order-1 duration-200">
         </a>
@@ -199,12 +201,12 @@
 
         </a>   
         <div class="order-4 m-auto text-white">
-            <h1 class="pointer-events-none font-bold text-transparent h-4 bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 animate-pulse">
+            <h1 class="pointer-events-none font-bold text-transparent h-4 bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400">
                 C:\Users\Faye\Tools
             </h1>
         </div>
     </div>
-        <div class="text-white font-bold absolute border-indigo-500 border-[0.5px] w-24 h-[22.3rem] bg-transparent p-2 rounded-bl-xl">
+        <div class="text-white font-bold absolute border-indigo-500 border-[0.5px] w-24 h-[22.3rem] p-2 rounded-bl-xl">
         <h1 class="mt-2 underline underline-offset-2 text-xs text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-300 to-yellow-500">
             ⌄ Favourites
         </h1>
@@ -220,32 +222,32 @@
         <div class="flex flex-row flex-wrap w-[30rem] pl-24">
             <div class="text-white p-8 font-mono flex-col items-start">
                 <img loading="lazy" src="https://faye.lol/img/tailwind-logo.png" class="duration-700 hover:scale-110 shadow-2xl order-1 h-14 w-14 border-2 rounded-xl bg-white p-4">
-                <h1 class="order-1 text-center drop-shadow-xl text-xs mt-2">
+                <h1 class="order-1 text-center text-xs mt-2">
                     Tailwind
                 </h1>
             </div>
             <div class="text-white p-8 font-mono flex-col items-center">
                 <img loading="lazy" href="https://www.javascript.com/" src="https://faye.lol/img/javaScript-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#f0db4f] border-yellow-300 p-4">
-                <h1 class="order-2 text-center m-auto drop-shadow-xl text-xs mt-2">
+                <h1 class="order-2 text-center m-auto text-xs mt-2">
                     JavaScript
                 </h1>
             </div>
 
             <div class="text-white p-8 font-mono flex-col items-center">
                 <img loading="lazy" src="https://faye.lol/img/html-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#E44D26] border-[#f05731] p-4">
-                <h1 class="order-2 text-center m-auto drop-shadow-xl text-xs mt-2">
+                <h1 class="order-2 text-center m-auto text-xs mt-2">
                     HTML
                 </h1>
             </div>
             <div class="text-white p-8 font-mono flex-col items-center">
                 <img loading="lazy" src="https://faye.lol//img/alpinejs-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#2E3440] border-[#2E3440] p-4">
-                <h1 class="order-2 text-center m-auto drop-shadow-xl text-xs mt-2">
+                <h1 class="order-2 text-center m-auto text-xs mt-2">
                     Alpine
                 </h1>
             </div>
             <div class="text-white p-8 font-mono flex-col items-center">
                 <img loading="lazy" src="https://faye.lol/img/css-logo.png" class="duration-700 hover:scale-110 shadow-xl order-1 h-14 w-14 border-2 rounded-xl bg-[#214CE5] border-[#214CE5] p-4">
-                <h1 class="order-2 text-center m-auto drop-shadow-xl text-xs mt-2">
+                <h1 class="order-2 text-center m-auto text-xs mt-2">
                     CSS
                 </h1>
             </div>
@@ -279,3 +281,70 @@
         Made by Faye with Tailwind CSS & Alpine JS
     </h1>
 </div>
+
+<!--Scripts-->
+<!--Section 1 Colour Change Script-->
+<script defer>
+window.addEventListener("scroll", scrollnav);
+if (window.innerHeight < 800){
+    var scroll1 = window.innerHeight - 300
+    } else {
+        var scroll1 = window.innerHeight - 150
+    }
+
+
+console.log(scroll1)
+function scrollnav() {
+  var y = window.scrollY;
+  if (y > scroll1) {
+    document.getElementById("section1").style.backgroundColor = "rgb(100 100 230)";
+    document.getElementById("section1").style.borderRadius = "(30px)";
+  } else {
+    document.getElementById("section1").style.backgroundColor = "rgb(30 41 59)";
+  }
+}
+</script>
+
+<!--Header Scroll Border Radius Change Script-->
+<script defer>
+window.addEventListener("scroll", header);
+if (window.innerHeight < 800){
+    var scroll = window.innerHeight - 500
+    } else {
+        var scroll = window.innerHeight - 500
+    }
+
+
+console.log(scroll)
+function header() {
+  var y = window.scrollY;
+  if (y > scroll) {
+    document.getElementById("header").style.borderRadius = "0px";
+    document.getElementById("header").classList.remove('bg-opacity-60');
+    document.getElementById("header").classList.add('bg-opacity-90');
+  } else {
+    document.getElementById("header").style.borderRadius = "0px 0px 24px 24px";
+    document.getElementById("header").classList.remove('bg-opacity-90');
+    document.getElementById("header").classList.add('bg-opacity-60');
+  }
+}
+</script>
+
+<!--Card animation script-->
+<script>
+window.addEventListener("scroll", cards)
+if (window.innerHeight < 800){
+    var cards = window.innerHeight - 300
+    } else {
+        var cards = window.innerHeight - 150
+    }
+function cards() {
+    var y = window.scrollY;
+    if (y > cards) {
+    document.getElementById("card2").style.transform = "scale(110%)";
+    document.getElementById("header").style.back
+    } else {
+        document.getElementById("card2").style.transform = "scale(100%)";
+    }
+}
+</script>
