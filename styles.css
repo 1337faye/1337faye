@@ -1226,6 +1226,18 @@ video {
   background-image: url('/Users/23_ayomideayorinde/Documents/Web/img/bg-web.jpg');
 }
 
+.bg-\[url\(\'\/img\/bg-web\.png\'\)\] {
+  background-image: url('/img/bg-web.png');
+}
+
+.bg-\[url\(\'https\:\/\/faye\.lol\/\/img\/bg-web\.png\'\)\] {
+  background-image: url('https://faye.lol//img/bg-web.png');
+}
+
+.bg-\[url\(\'https\:\/\/faye\.lol\/img\/bg-web\.png\'\)\] {
+  background-image: url('https://faye.lol/img/bg-web.png');
+}
+
 .from-violet-500 {
   --tw-gradient-from: #8b5cf6;
   --tw-gradient-to: rgb(139 92 246 / 0);
