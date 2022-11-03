@@ -1393,6 +1393,10 @@ video {
     display: none;
   }
 
+  .sm\:h-10 {
+    height: 2.5rem;
+  }
+
   .sm\:rounded-md {
     border-radius: 0.375rem;
   }
