@@ -5,9 +5,7 @@
     <html lang="en">
     <meta name="darkreader-lock">
     <script rel="preload" src="onload.js"></script>
-    <link  href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" defer />
     <link href="styles.css" rel="stylesheet">
     <meta content="Faye - Home" property="og:title" />
     <meta content="My name is Faye, I'm a front-end web developer and graphic designer." property="og:description" />
@@ -41,8 +39,8 @@
         </div>
     </div>
 </spinner>
-<section class="min-h-screen overflow-y-hidden overflow-x-hidden sticky max-w-screen bg-no-repeat bg-cover bg-fixed bg-violet-700 bg-bottom bg-[url('img/bgweb.jpg')] backdrop-blur-3xl">
-        <header id="header" class="absolute duration-300 h-[5rem] bg-gradient-to-b   overflow-x-hidden overflow-y-hidden w-screen flex place-content-center">
+<section class="pt-0 mt-0 overflow-y-hidden overflow-x-hidden sticky max-w-screen bg-no-repeat bg-cover bg-fixed bg-violet-700 bg-bottom bg-[url('img/bgweb.jpg')] backdrop-blur-3xl">
+        <header id="header" class="mt-0 pt-0 absolute duration-300 h-[5rem] bg-gradient-to-b   overflow-x-hidden overflow-y-hidden w-screen flex place-content-center">
            <div id="navbar" style="transition-duration: 250ms;" class="text-white place-content-between w-screen p-4 rounded-xl max-w-screen-md flex">
                 <ul id="left-header" class="duration-300 order-1 justify-start ">
                     <li class=" font-normal text-lg sm:text-2xl mt-2 hover:bg-bl">
@@ -52,13 +50,13 @@
                 <ul id="right-header" class="order-2 flex flex-row mr-0 justify-end  z-[60]">
                     <li  class=" mx-2 px-2 h-[5rem]   sm:hover:border-b-2 -mt-4 rounded-sm">
                         
-                        <a href="https://github.com/1337faye/EntityRender" >  <img src="img/github.svg" class="invert drop-shadow-2xl pointer-events-none duration-500 hover:scale-100 scale-75 flex  h-8 sm:h-10 m-auto mt-6"> </a>
+                        <a href="https://github.com/1337faye/EntityRender" >  <img src="img/github.svg" alt="My Github profile" class="invert drop-shadow-2xl pointer-events-none duration-500 hover:scale-100 scale-75 flex  h-8 sm:h-10 m-auto mt-6"> </a>
                     </li>
                     <li class=" mx-2 px-2 h-[5rem]   sm:hover:border-b-2 -mt-4 rounded-sm">
-                        <a href="https://discord.com/users/238889021940432906" >  <img src="img/discord.svg" class="invert drop-shadow-2xl pointer-events-none duration-500 hover:scale-100 scale-75 flex h-8 sm:h-10 m-auto mt-6"> </a>
+                        <a href="https://discord.com/users/238889021940432906" >  <img src="img/discord.svg" alt="My Discord profile" class="invert drop-shadow-2xl pointer-events-none duration-500 hover:scale-100 scale-75 flex h-8 sm:h-10 m-auto mt-6"> </a>
                     </li>
                     <li class=" mx-2 px-2 h-[5rem]   sm:hover:border-b-2 -mt-4 rounded-sm">
-                        <a href="mailto:faye@faye.lol">  <img src="img/envelope-regular.svg" class="invert drop-shadow-2xl pointer-events-none duration-500 hover:scale-100 scale-75 flex  h-8 sm:h-10 m-auto mt-6"> </a>
+                        <a href="mailto:faye@faye.lol">  <img src="img/envelope-regular.svg" alt="Send me an email" class="invert drop-shadow-2xl pointer-events-none duration-500 hover:scale-100 scale-75 flex  h-8 sm:h-10 m-auto mt-6"> </a>
                     </li>
                 </ul>
            </div>
@@ -83,7 +81,7 @@
 
     </div>
 </hero>
-
+</section>
 <div class="pb-14 bg-slate-900 w-screen">
     <div  class=" bg-cover shadow-2xl  -translate-y-28 md:-translate-y-36 m-auto h-[31.625rem] max-h-[60vw] w-[42rem] max-w-[80vw] bg-slate-100 rounded-3xl">
         <div class="w-[42rem] max-w-[80vw] mt-4 align-middle absolute h-4">
@@ -130,10 +128,10 @@
                     You can contact me through my socials linked below or my contact form.
                  </p>
                  <socials class="flex flex-row place-content-center mt-4 gap-2 md:gap-8">
-                    <img loading="lazy" src="img/socialicons/instagram.gif" class="h-8 " >
-                    <img loading="lazy" src="img/socialicons/youtube.gif" class="h-8 " >
-                    <img loading="lazy" src="img/socialicons/twitter.gif" class="h-8" >
-                    <img loading="lazy" src="img/socialicons/tiktok.gif" class="h-8" >
+                    <img loading="lazy" src="img/socialicons/instagram.gif" alt="Example page Instagram icon" class="h-8 " >
+                    <img loading="lazy" src="img/socialicons/youtube.gif" alt="Example page YouTube icon" class="h-8 " >
+                    <img loading="lazy" src="img/socialicons/twitter.gif" alt="Example page Twitter icon" class="h-8" >
+                    <img loading="lazy" src="img/socialicons/tiktok.gif" alt="Example page TikTok icon" class="h-8" >
                  </socials>
 
                  
@@ -171,14 +169,14 @@
     <div class=" px-4 border-2 border-slate-800 shadow-xl w-64 md:w-[30rem] max-w-[60vw] m-auto h-20 bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-700 rounded-2xl flex gap-0">
         <div class="flex gap-4 place-content-center m-auto">
             <div class="flex ml-0 -translate-x-20">
-                <a href="https://archlinux.org/" > <img src="img/dock/windows.svg" class="hidden md:flex ml-0 mr-4 shadow-2xl h-12 w-12 invert m-auto bg-gradient-to-tr from-orange-400 to-orange-700 p-2 rounded-xl" > </a>
+                <a href="https://archlinux.org/" > <img src="img/dock/windows.svg" alt="Windows icon" class="hidden md:flex ml-0 mr-4 shadow-2xl h-12 w-12 invert m-auto bg-gradient-to-tr from-orange-400 to-orange-700 p-2 rounded-xl" > </a>
                 <div class="hidden md:flex ml-0 mr-16 shadow-2xl h-12 w-[1px] m-auto bg-slate-400" >
             </div>
 
             </div>
             <div class="flex -translate-x-0 md:-translate-x-[9.5rem]">
-                <img id="browser" onclick="browser()" src="img/dock/firefox.svg" class="cursor-pointer mx-2 invert shadow-2xl h-12 w-12  m-auto bg-gradient-to-tr from-[#046dc3] to-[#10bbbb] p-2 rounded-xl" >
-                <img id="notepad" onclick="notepad()" src="img/dock/note.svg" class=" cursor-pointer mx-2 shadow-2xl h-12 w-12 invert m-auto bg-gradient-to-tr from-blue-700 to-blue-800 p-2 rounded-xl" > 
+                <img id="browser" onclick="browser()" src="img/dock/firefox.svg" alt="Browser icon" class="cursor-pointer mx-2 invert shadow-2xl h-12 w-12  m-auto bg-gradient-to-tr from-[#046dc3] to-[#10bbbb] p-2 rounded-xl" >
+                <img id="notepad" onclick="notepad()" src="img/dock/note.svg" alt="Notepad icon" class=" cursor-pointer mx-2 shadow-2xl h-12 w-12 invert m-auto bg-gradient-to-tr from-blue-700 to-blue-800 p-2 rounded-xl" > 
             </div>
             
         </div>    

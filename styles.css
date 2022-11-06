@@ -1811,6 +1811,10 @@ video {
   padding-top: 1rem;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .text-center {
   text-align: center;
 }
