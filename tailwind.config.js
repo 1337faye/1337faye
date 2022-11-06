@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'main': ['Abril Fatface']
+        'main': ['Abril Fatface'],
+        'title': ['Yesva One']
       }
     },
   },
