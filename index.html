@@ -15,7 +15,6 @@
     <meta name="keywords" content="Faye, graphic design, website builder, website, developer, discord, front-end, front end, website designer, website maker, ">
     <meta content="https://faye.lol/img/bg2.png" property="og:image" />
     <meta content="#9500ff" data-react-helmet="true" name="theme-color" />
-    <link rel="manifest" href="/site.webmanifest">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
@@ -23,9 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faye - Home</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/styles.css" rel="stylesheet">
 </head>
 <spinner class="duration-500 min-h-screen overflow-hidden scroll-m-0 z-50 fixed">
     <div class="m-auto w-screen min-h-screen overflow-hidden text-white flex flex-col place-content-center bg-gradient-to-b bg-cover from-violet-500 via-violet-700 to-violet-600">
@@ -39,7 +36,7 @@
         </div>
     </div>
 </spinner>
-<section class="pt-0 mt-0 overflow-y-hidden overflow-x-hidden sticky max-w-screen bg-no-repeat bg-cover bg-fixed bg-violet-700 bg-bottom bg-[url('img/bgweb.jpg')] backdrop-blur-3xl">
+<section style="will-change: transform; background-image: url('img/bgweb.jpg');" class="pt-0 mt-0 overflow-y-hidden overflow-x-hidden sticky max-w-screen bg-no-repeat bg-cover bg-violet-700" > 
         <header id="header" class="mt-0 pt-0 absolute duration-300 h-[5rem] bg-gradient-to-b   overflow-x-hidden overflow-y-hidden w-screen flex place-content-center">
            <div id="navbar" style="transition-duration: 250ms;" class="text-white place-content-between w-screen p-4 rounded-xl max-w-screen-md flex">
                 <ul id="left-header" class="duration-300 order-1 justify-start ">
@@ -82,7 +79,7 @@
     </div>
 </hero>
 </section>
-<div class="pb-14 bg-slate-900 w-screen">
+<div style="will-change: transform" class="pb-14 bg-slate-900 min-w-screen max-w-screen">
     <div  class=" bg-cover shadow-2xl  -translate-y-28 md:-translate-y-36 m-auto h-[31.625rem] max-h-[60vw] w-[42rem] max-w-[80vw] bg-slate-100 rounded-3xl">
         <div class="w-[42rem] max-w-[80vw] mt-4 align-middle absolute h-4">
             <div class="text-white ml-40 font-semibold translate-y-2 sm:translate-y-0 text-[0.6rem] sm:text-base">
@@ -109,7 +106,7 @@
                 <header id="header" class=" h-[4rem] sm:h-[5rem] bg-gradient-to-r from-blue-900 to-slate-800  overflow-x-hidden overflow-y-hidden flex place-content-center">
                     <div id="navbar" style="border-radius: 0.75rem;" class="text-white place-content-between w-screen p-4 rounded-xl max-w-screen-md flex">
                          <ul id="left-header" class=" order-1 justify-start ">
-                             <li class="font-normal text-lg sm:text-2xl font-main -mt-1 sm:mt-2 hover:bg-bl aos-init aos-animate">
+                             <li class="font-normal text-lg sm:text-2xl font-main -mt-1 sm:mt-2 hover:bg-bl ">
                                  <a href="index.html" class=" tracking-wide hover:border-b-2 border-b-4 border-b-blue-500 bg-clip-border ">koen dalas.</a>
                              </li>
                          </ul>
@@ -185,14 +182,11 @@
     
 </div>
  
-<div class="w-screen h-20 bg-slate-900 flex place-content-center">
+<div style="will-change: transform" class="w-screen h-20 bg-slate-900 flex place-content-center">
     <p class="duration-300 text-white text-lg font-normal m-auto">
         ❤️
     </p>
 </div>
-<script>
-AOS.init();
-</script>
 
 <script>
 function hidekoensite() {

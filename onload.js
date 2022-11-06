@@ -2,12 +2,11 @@ function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
   }
   
-console.log("Stop looking at the console, there is nothing to see here, go away - Faye")
+console.log("Thanks for checking out my website!")
 const sleepNow = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 async function loader() {
    document.onreadystatechange = async function() {
     await sleepNow(700)
-    console.log("Yes, I know I'm deliberately adding more loading time but it's totally peak UX")
      if (document.readyState !== "complete") {
                     document.querySelector("body").style.visibility = "hidden";
                   document.querySelector("spinner").style.visibility = "visible";
@@ -23,8 +22,7 @@ async function loader() {
 }
 
 randint = Math.floor(getRandomArbitrary(1,10))
-console.log(randint)
-console.log(getRandomArbitrary(1,10))
+
 async function splashscreen() {
     if (randint == 1) {
         await sleepNow(300)
