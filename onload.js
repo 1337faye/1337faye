@@ -8,13 +8,14 @@ async function loader() {
    document.onreadystatechange = async function() {
     await sleepNow(700)
      if (document.readyState !== "complete") {
+        await sleepNow(1000)
                     document.querySelector("body").style.visibility = "hidden";
                   document.querySelector("spinner").style.visibility = "visible";
               } else {
                   document.querySelector("spinner").style.opacity = "0%";
                   document.getElementById("load").style.scale = "50%";
 
-                  await sleepNow(1000)
+  
                   document.querySelector("spinner").style.visibility = "hidden";
                   document.querySelector("body").style.visibility = "visible";
               }
@@ -50,7 +51,7 @@ async function splashscreen() {
     }
     else if (randint == 7){
         await sleepNow(300)
-        document.getElementById("splashscreen").innerHTML = "Ice cream is overrated!"; 
+        document.getElementById("splashscreen").innerHTML = "Made in atleast 1 hour!"; 
     }
     else if (randint == 8){
         await sleepNow(300)
@@ -62,7 +63,7 @@ async function splashscreen() {
     }
     else if (randint == 10){
         await sleepNow(300)
-        document.getElementById("splashscreen").innerHTML = "No added preservatives!"; 
+        document.getElementById("splashscreen").innerHTML = "Mobile optimised!"; 
     }
     else{
         console.log("Error")
