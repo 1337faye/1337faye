@@ -21,9 +21,11 @@ function koen() {
     document.getElementById("morebutton").classList.remove('bg-slate-800')
 }    
 
-async function notepad() {
+function notepad() {
     document.getElementById("notepadpage").style.visibility = "visible";
     document.getElementById("notepadpage").classList.remove('hidden')
+    document.getElementById("browser").classList.remove('ring-2')
+    document.getElementById("notepad").classList.add('ring-2')
     document.getElementById("koenbutton").classList.add('hidden')
     document.getElementById("morebutton").classList.add('hidden')
     document.getElementById("koensite").style.visibility = "hidden";
@@ -38,10 +40,12 @@ async function notepad() {
 
 
 
-async function browser() {
+function browser() {
     document.getElementById("koenbutton").classList.add('border-slate-600')
     document.getElementById("koenbutton").classList.add('bg-slate-800')
     document.getElementById("morebutton").classList.add('border-slate-800')
+    document.getElementById("browser").classList.add('ring-2')
+    document.getElementById("notepad").classList.remove('ring-2')
     document.getElementById("morebutton").classList.remove('border-slate-600')
     document.getElementById("morebutton").classList.remove('bg-slate-800')
     document.getElementById("notepadpage").style.visibility = "hidden";
