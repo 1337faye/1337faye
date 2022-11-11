@@ -31,7 +31,7 @@
             
         </div>
 
-        <div class="relative order-2 font-bold mt-0 m-auto h-0 ">
+        <div class="from-yellow-400 to-yellow-500 relative order-2 font-bold mt-0 m-auto h-0 ">
             <p style="font-family: 'Secular One', sans-serif;" id="splashscreen" class="text-center text-xl">
                 
         </div>
@@ -143,10 +143,10 @@
                          
                     </div>
                  </header>
-                 <p class="text-center mt-6 md:mt-20 m-auto text-white font-bold  text-lg md:text-3xl">
+                 <p class="text-center mt-1 md:mt-20 m-auto text-white font-bold  text-lg md:text-3xl">
                     Contact Me:
                  </p>
-                 <p class="text-center mt-1 mb-0 md:mb-auto md:mt-2 w-32 md:w-72 m-auto text-white text-[0.5rem]  md:text-lg">
+                 <p class="text-center mt-1 mb-0 md:mb-auto md:mt-2 w-48 md:w-72 m-auto text-white text-[12px]  md:text-lg">
                     You can contact me through my socials linked below or my contact form.
                  </p>
                  <socials class="flex flex-row place-content-center mt-2 md:mt-4 gap-2 md:gap-8">
@@ -159,7 +159,7 @@
                  
             </div>
             <div id="more" class= " invisible m-auto flex w-[42rem] max-w-[80vw] rounded-b-2xl sm:rounded-b-3xl h-[31.625rem] max-h-[60vw] -translate-y-[14.75rem] md:-translate-y-[24rem]    flex-col">
-                <div class="translate-y-6  sm:-translate-y-2 md:translate-y-0 lg:-translate-y-0 mt-0 order-1 border-slate-800 h-[2rem] md:h-[3rem] bg-slate-900  w-[42rem] max-w-[80vw] flex flex-row place-content-center ">
+                <div class="translate-y-[1.62rem]  sm:-translate-y-2 md:translate-y-0 lg:-translate-y-0 mt-0 order-1 border-slate-800 h-[2rem] md:h-[3rem] bg-slate-900  w-[42rem] max-w-[80vw] flex flex-row place-content-center ">
                     <div class="ml-6 mr-1 w-[1.25rem] md:w-[2rem] h-[1.25rem] md:h-[2rem]  bg-gradient-to-tr from-bg-slate-600 ring-2 ring-slate-800 to-bg-slate-700 rounded-sm sm:rounded-lg flex place-content-center m-auto">
                         <i class="m-auto  fa-solid fa-arrow-left text-slate-400 ">
 
@@ -191,7 +191,7 @@
                     <p class="text-center mb-3 border-b-2 text-white font-extrabold text-xs sm:text-lg md:text-2xl">
                         Notes
                     </p>
-                    <h1 class="text-white font-bold text-[0.4rem] md:text-lg text-center md:text-left ">
+                    <h1 class="text-white font-bold text-[12px] md:text-lg text-center md:text-left ">
                         About Me
                     </h1>
                     <p class="text-slate-200 text-xs text-center md:text-left ">
@@ -214,7 +214,7 @@
     <div id="dock" class=" px-4 border-2 border-slate-800 shadow-xl w-64 md:w-[30rem] max-w-[60vw] m-auto h-20 bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-700 rounded-2xl flex gap-0">
         <div class="flex gap-4 place-content-center m-auto">
             <div class="flex ml-0 -translate-x-20">
-                <a href="https://archlinux.org/" > <img src="img/dock/windows.svg" alt="Windows icon" class="hidden md:flex ml-0 mr-4 shadow-2xl h-12 w-12 invert m-auto bg-gradient-to-tr from-orange-400 to-orange-700 p-2 rounded-xl" > </a>
+                <a aria-label="Windows" href="https://archlinux.org/" > <img src="img/dock/windows.svg" alt="Windows icon" class="hidden md:flex ml-0 mr-4 shadow-2xl h-12 w-12 invert m-auto bg-gradient-to-tr from-orange-400 to-orange-700 p-2 rounded-xl" > </a>
                 <div class="hidden md:flex ml-0 mr-16 shadow-2xl h-12 w-[1px] m-auto bg-slate-400" >
             </div>
 
@@ -230,7 +230,7 @@
     
 </div>
  
-<topbutton id="topbutton" class="shadow-2xl pointer-events-none duration-500 opacity-0 fixed h-16 w-16 bg-white text-purple-400 hover:bg-purple-400 hover:text-white bottom-14 right-8 rounded-full z-50">
+<topbutton id="topbutton" class="hidden md:flex md:fixed shadow-2xl pointer-events-none duration-500 opacity-0  h-16 w-16 bg-white text-purple-400 hover:bg-purple-400 hover:text-white bottom-14 right-8 rounded-full z-50">
     <a href="#header" aria-label="Back to top" class=" h-16 w-16 flex place-content-center">
         <i class="fa-solid fa-arrow-up m-auto  scale-125">
         </i>
@@ -250,4 +250,6 @@
 
 <script async defer src="backtotop.js"></script>
 <script async defer src="browser.js"></script>
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"></noscript>
+
