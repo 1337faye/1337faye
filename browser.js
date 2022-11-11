@@ -1,11 +1,3 @@
-function hidekoensite() {
-    
-}
-var notepadopen = 0
-var koensiteopen = 1
-var moreopen = 0
-
-
 function more() {
     document.getElementById("koensite").style.visibility = "hidden";
     document.getElementById("page").style.backgroundImage = "none";
@@ -16,8 +8,6 @@ function more() {
     document.getElementById("koenbutton").classList.add('border-slate-800')
     document.getElementById("koenbutton").classList.remove('border-slate-600')
     document.getElementById("koenbutton").classList.remove('bg-slate-800')
-    koensiteopen = 0
-    moreopen = 1
 }  
 function koen() {
     document.getElementById("more").style.visibility = "hidden";
@@ -29,8 +19,6 @@ function koen() {
     document.getElementById("morebutton").classList.add('border-slate-800')
     document.getElementById("morebutton").classList.remove('border-slate-600')
     document.getElementById("morebutton").classList.remove('bg-slate-800')
-    return console.log("Switched tab to Koen's website")
-
 }    
 
 async function notepad() {
@@ -45,11 +33,7 @@ async function notepad() {
     document.getElementById("statusbar").classList.add('from-yellow-400')  
     document.getElementById("statusbar").classList.add('to-yellow-500') 
     document.getElementById("more").style.visibility = "hidden";
-    document.getElementById("notepadpage").classList.remove('duration-500')
-    notepadopen = 1
-
- 
-    
+    document.getElementById("notepadpage").classList.remove('duration-500')    
 }
 
 
@@ -71,7 +55,6 @@ async function browser() {
     document.getElementById("statusbar").classList.add('to-slate-800')
     document.getElementById("statusbar").classList.remove('from-yellow-400')  
     document.getElementById("statusbar").classList.remove('to-yellow-500') 
-    await sleepNow(500)
     document.getElementById("notepadpage").classList.remove('duration-500')
-    notepadopen = 1
+
 }
