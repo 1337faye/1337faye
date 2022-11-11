@@ -6,6 +6,8 @@
     <meta name="darkreader-lock">
     <link rel="icon" type="image/x-icon" href="img/logo.png">
     <script rel="preload" src="onload.js"></script>
+    <script async defer src="backtotop.js"></script>
+    <script async defer src="browser.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" defer />
     <link href="styles.css" rel="stylesheet">
     <meta content="Faye - Home" property="og:title" />
@@ -41,12 +43,6 @@
         </div>
     </div>
 </spinner>
-<div class="header hidden sm:flex">
-    <div class="progress-container">
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
-  </div>
-  
 <section style="will-change: transform; background-image: url('img/bgweb.jpg');" class="pt-0 mt-0 overflow-y-hidden overflow-x-hidden sticky max-w-screen bg-no-repeat bg-cover bg-violet-700" > 
         <header id="header" class="mt-0 pt-0 absolute h-[5rem]  overflow-x-hidden overflow-y-hidden w-screen flex place-content-center">
            <div id="navbar" style="transition-duration: 250ms;" class="text-white place-content-between w-screen p-4 rounded-xl max-w-screen-md flex">
@@ -74,8 +70,8 @@
 
 <hero class=" bg-slate-900 min-h-screen relative max-w-[100vw]">
     <div class="flex flex-col place-content-center order-1 my-16 m-auto z-0 w-screen align-middle ">
-        <h1 style="font-family: 'Secular One', sans-serif;" class="pointer-events-none order-1 mt-20 md:mt-[10vh] lg:mt-20 m-auto font-extrabold text-center p-8 inline-block bg-clip-text text-transparent drop-shadow-red-500 drop-shadow-lg bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 text-2xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
-            I'm a  <a class="text-transparent bg-clip-text  bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">front-end <br> </a>  website developer <br> and <a class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">graphic designer.</a>
+        <h1 style="font-family: 'Secular One', sans-serif;" class="select-none pointer-events-none order-1 mt-20 md:mt-[10vh] lg:mt-20 m-auto font-extrabold text-center p-8 inline-block bg-clip-text text-transparent drop-shadow-red-500 drop-shadow-lg bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 text-2xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+            I'm a  <r class="text-transparent bg-clip-text  bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">front-end <br> </r>  website developer <br> and <r class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500">graphic designer.</r>
         </h1>
         <h2 style="font-family: 'Secular One', sans-serif;" class="pointer-events-none mb-24 md:mb-24 order-2 mx-2 md:mx-16 px-4 py-0 md:py-4 lg:py-8 font-bold drop-shadow-xl bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100 bg-clip-text text-transparent text-center text-sm md:text-lg lg:text-xl">
             I design and build                     <span class=" drop-shadow-2xl bg-transparent md:bg-yellow-400 p-0 sm:p-1"><span class="text-transparent md:text-white bg-clip-text bg-gradient-to-r from-purple-100 via-violet-100 to-violet-100">highly performant websites</span></span>  with HTML, Tailwind & JavaScript.
@@ -256,120 +252,5 @@
 </div>
 </html>
 </html>
-<script>
-function hidekoensite() {
-    
-}
-var notepadopen = 0
-var koensiteopen = 1
-var moreopen = 0
 
 
-function more() {
-    document.getElementById("koensite").style.visibility = "hidden";
-    document.getElementById("page").style.backgroundImage = "none";
-    document.getElementById("more").style.visibility = "visible";
-    document.getElementById("morebutton").classList.remove('border-slate-800')
-    document.getElementById("morebutton").classList.add('border-slate-600')
-    document.getElementById("morebutton").classList.add('bg-slate-800')
-    document.getElementById("koenbutton").classList.add('border-slate-800')
-    document.getElementById("koenbutton").classList.remove('border-slate-600')
-    document.getElementById("koenbutton").classList.remove('bg-slate-800')
-    koensiteopen = 0
-    moreopen = 1
-}  
-function koen() {
-    document.getElementById("more").style.visibility = "hidden";
-    document.getElementById("koensite").style.visibility = "visible";
-    document.getElementById("page").style.backgroundImage = "url('img/koen/bg.jpg')";
-    document.getElementById("koenbutton").classList.remove('border-slate-800')
-    document.getElementById("koenbutton").classList.add('border-slate-600')
-    document.getElementById("koenbutton").classList.add('bg-slate-800')
-    document.getElementById("morebutton").classList.add('border-slate-800')
-    document.getElementById("morebutton").classList.remove('border-slate-600')
-    document.getElementById("morebutton").classList.remove('bg-slate-800')
-    return console.log("Switched tab to Koen's website")
-
-}    
-
-async function notepad() {
-    document.getElementById("notepadpage").style.visibility = "visible";
-    document.getElementById("notepadpage").classList.remove('hidden')
-    document.getElementById("koenbutton").classList.add('hidden')
-    document.getElementById("morebutton").classList.add('hidden')
-    document.getElementById("koensite").style.visibility = "hidden";
-    document.getElementById("page").style.backgroundImage = "none";
-    document.getElementById("statusbar").classList.remove('from-slate-900')  
-    document.getElementById("statusbar").classList.remove('to-slate-800')
-    document.getElementById("statusbar").classList.add('from-yellow-400')  
-    document.getElementById("statusbar").classList.add('to-yellow-500') 
-    document.getElementById("more").style.visibility = "hidden";
-    document.getElementById("notepadpage").classList.remove('duration-500')
-    notepadopen = 1
-
- 
-    
-}
-
-
-
-async function browser() {
-    document.getElementById("koenbutton").classList.add('border-slate-600')
-    document.getElementById("koenbutton").classList.add('bg-slate-800')
-    document.getElementById("morebutton").classList.add('border-slate-800')
-    document.getElementById("morebutton").classList.remove('border-slate-600')
-    document.getElementById("morebutton").classList.remove('bg-slate-800')
-    document.getElementById("notepadpage").style.visibility = "hidden";
-    document.getElementById("more").style.visibility = "hidden";
-    document.getElementById("koensite").style.visibility = "visible";
-    document.getElementById("koenbutton").classList.remove('hidden')
-    document.getElementById("morebutton").classList.remove('hidden')
-    document.getElementById("koensite").style.visibility = "visible";
-    document.getElementById("page").style.backgroundImage = "url('img/koen/bg.jpg')";
-    document.getElementById("statusbar").classList.add('from-slate-900')  
-    document.getElementById("statusbar").classList.add('to-slate-800')
-    document.getElementById("statusbar").classList.remove('from-yellow-400')  
-    document.getElementById("statusbar").classList.remove('to-yellow-500') 
-    await sleepNow(500)
-    document.getElementById("notepadpage").classList.remove('duration-500')
-    notepadopen = 1
-}
-</script>
-
-<script>
-const showOnPx = 100;
-const backToTopButton = document.querySelector("topbutton")
-
-const scrollContainer = () => {
-  return document.documentElement || document.body;
-};
-
-document.addEventListener("scroll", () => {
-  if (scrollContainer().scrollTop > showOnPx) {
-    backToTopButton.classList.remove("opacity-0")
-    backToTopButton.classList.add("pointer-events-auto")
-    backToTopButton.classList.remove("pointer-events-none")
-
-
-  } else {
-    backToTopButton.classList.add("opacity-0")
-    backToTopButton.classList.add("pointer-events-none")
-    backToTopButton.classList.remove("pointer-events-auto")
-  }
-})
-</script>
-
-
-<script>
-function progressBarScroll() {
-  let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
-      height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
-      scrolled = (winScroll / height) * 100;
-  document.getElementById("progressBar").style.width = scrolled + "%";
-}
-
-window.onscroll = function () {
-  progressBarScroll();
-};
-
-</script>
