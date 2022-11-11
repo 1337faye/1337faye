@@ -22,7 +22,7 @@ function more() {
 function koen() {
     document.getElementById("more").style.visibility = "hidden";
     document.getElementById("koensite").style.visibility = "visible";
-    document.getElementById("page").style.backgroundImage = "url('img/koen/bg.jpg')";
+    document.getElementById("page").style.backgroundImage = "url('img/koen/bg.webp')";
     document.getElementById("koenbutton").classList.remove('border-slate-800')
     document.getElementById("koenbutton").classList.add('border-slate-600')
     document.getElementById("koenbutton").classList.add('bg-slate-800')
@@ -66,7 +66,7 @@ async function browser() {
     document.getElementById("koenbutton").classList.remove('hidden')
     document.getElementById("morebutton").classList.remove('hidden')
     document.getElementById("koensite").style.visibility = "visible";
-    document.getElementById("page").style.backgroundImage = "url('img/koen/bg.jpg')";
+    document.getElementById("page").style.backgroundImage = "url('img/koen/bg.webp')";
     document.getElementById("statusbar").classList.add('from-slate-900')  
     document.getElementById("statusbar").classList.add('to-slate-800')
     document.getElementById("statusbar").classList.remove('from-yellow-400')  
