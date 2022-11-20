@@ -22,9 +22,10 @@ async function loader() {
             }
 }
 
-randint = Math.floor(getRandomArbitrary(1,10))
+randint = Math.floor(getRandomArbitrary(1,12))
 
 async function splashscreen() {
+    console.log(randint)
     if (randint == 1) {
         await sleepNow(300)
         document.getElementById("splashscreen").innerHTML = "Now with extra JavaScript!";
@@ -64,6 +65,10 @@ async function splashscreen() {
     else if (randint == 10){
         await sleepNow(300)
         document.getElementById("splashscreen").innerHTML = "Mobile optimised!"; 
+    }
+    else if (randint == 11){
+        await sleepNow(300)
+        document.getElementById("splashscreen").innerHTML = "404, intellisense not found"; 
     }
     else{
         console.log("Error")
