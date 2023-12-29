@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c27c14d9cd.js" crossorigin="anonymous"></script>
+ 
+    <style>
+        @font-face {
+            font-family: 'Stretch Sans';
+            src: url('STRRETCH-SANS.otf') format('opentype');
+        }
+        
+        
+    </style>
+</head>
+
+<body class=" bg-cover bg-no-repeat" style="background-image: url(svg.webp);">
+
+
+
+        <section class="min-h-screen bg-cover" style="background-image: url(svg.webp);">
+            <header class="absolute inset-x-0 top-0 z-50">
+                <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                  <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">faye.lol</span>
+                        <a href="index.html" style="font-family: 'Stretch Sans';" id="changeFontText" class="transition-all duration-500 tracking-wide font-bold text-white hover:tracking-[1rem] changeFontText"> FAYE</a>
+                    </a>
+                  </div>
+                  <div class="flex lg:hidden">
+                    <button id="mobile-menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 bg-black bg-opacity-25 text-white">
+                      <span class="sr-only">Open main menu</span>
+                      <svg class="h-6 w-6 z-50" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                      </svg>
+                  </button>
+                  
+                  </div>
+                  <div  class="font-bold tracking-wide hidden lg:flex lg:gap-x-12">
+                    <a href="portfolio.html" class="text-sm font-semibold leading-6 text-white">PORTFOLIO</a>
+                    <a href="resume.html" class="text-sm font-semibold leading-6 text-white">RESUME</a>
+                    
+                    <a href="https://www.fiverr.com/s/33p4Dm" class="text-sm font-semibold leading-6 text-white">FIVERR</a>
+                  </div>
+                  <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                    <a href="mailto:faye@faye.lol" class="text-sm font-semibold leading-6 text-white">Get In Touch <span aria-hidden="true">&rarr;</span></a>
+                  </div>
+                </nav>
+                <!-- Mobile menu, show/hide based on menu open state. -->
+                <div id="mobile-menu" class="hidden mobile-menu lg:hidden z-40" role="dialog" aria-modal="true">
+                  <!-- Background backdrop, show/hide based on slide-over state. -->
+                  <div class="fixed inset-0 z-0"></div>
+                  <div class="fixed inset-y-0 right-0 z-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div class="flex items-center justify-between">
+                      <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Menu</span>
+                        <h1 style="font-family: 'Stretch Sans';">Menu</h1>
+                      </a>
+                      <button id="menu-button" type="button" class="menu-button -m-2.5  rounded-md p-2.5 bg-black text-black">
+                        <span class="sr-only text-black">Close menu</span>
+                        <svg id="close-button" class="h-6 w-6 close-button invert" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    
+                    
+                    </div>
+                    <div class="mt-6 flow-root">
+                      <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                          <a href="portfolio.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">PORTFOLIO</a>
+                          <a href="resume.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">RESUME</a>
+        
+                          <a href="https://www.fiverr.com/s/33p4Dm" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">FIVERR</a>
+                        </div>
+                        <div class="py-6">
+                          <a href="mailto:faye@faye.lol" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Get In Touch</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </header>
+
+       <div  class="w-screen bg-black   bg-opacity-25 backdrop-blur-xl mt-16">
+            <div class="container mx-auto px-4 pt-32">
+                <div class="flex flex-wrap justify-center">
+                    <div class="w-full lg:w-9/12 px-4">
+                        <div class="relative flex flex-col min-w-0 break-words  w-full mb-6  ">
+                            <div class="px-6">
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                                        <div class="relative">
+                                            <img alt="..." src="profile.jpg" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px" />
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <div class="text-center ">
+                                    <h3 class="text-4xl font-semibold leading-normal mb-2 text-white mb-2">
+                                        Ayomide Ayorinde 
+                                    </h3>
+                                    <h4 class="text-xs font-semibold mb-6 text-gray-200">
+                                        (I also go by the name "Faye")
+                                    </h4>
+                                    <div class="text-sm leading-normal mt-0 mb-2 text-gray-200 font-bold uppercase">
+                                        <i class="fas fa-map-marker-alt mr-2 text-lg text-white"></i> Melbourne, Australia
+                                    </div>
+                                    <div class="mb-2 text-white mt-10">
+                                                                            <i class="fas fa-briefcase mr-2 text-lg text-white"></i> Full Stack Web Developer
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                    <div class="mt-10 py-10 border-t border-gray-300 text-center">
+                                                                        <div class="flex flex-wrap justify-center">
+                                                                            <div class="w-full lg:w-9/12 px-4">
+                                                                                <p id="description" class="mb-4 text-lg leading-relaxed text-gray-200">
+                                                                                    Hi! I'm a full stack web developer from Melbourne, I love designing and deploying websites, playing video games and making music, I'm also really into computer hardware general software development (Which is why I'm studying I.T @ Monash) and I'm always looking to learn new things! I love PHP and TailwindCSS (This cover letter is made with Tailwind), and I've been developing static websites and messing around with Wordpress since I was 12 years old.
+                                                                                </p>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+     
+                           
+<footer class="bg-white dark:bg-gray-900">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+              <a href="faye.lol" class="flex items-center">
+                  
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FAYE</span>
+              </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© insert current year :  <a href="faye.lol" class="hover:underline">faye.lol</a>. No Rights Reserved ):
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+              
+              <a href="https://discord.com/users/238889021940432906" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                    </svg>
+                  <span class="sr-only">Discord community</span>
+              </a>
+              
+              <a href="https://github.com/1337faye" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+              </a>
+             
+          </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+
+
+<script>
+    const textElement = document.getElementById('changeFontText');
+    const fonts = ['Arial', 'Times New Roman', 'Verdana'];
+    let currentIndex = 0;
+    let originalFont = textElement.style.fontFamily;
+  
+    let intervalId;
+  
+    textElement.addEventListener('mouseover', () => {
+      intervalId = setInterval(() => {
+        currentIndex = (currentIndex + 1) % fonts.length;
+        textElement.style.fontFamily = fonts[currentIndex];
+      }, 500);
+    });
+  
+    textElement.addEventListener('mouseout', () => {
+      // Stop the font-changing interval when not hovered
+      clearInterval(intervalId);
+      textElement.style.fontFamily = originalFont;
+    });
+  </script>
+  
+  
+  <style>
+    #floatingdiv {
+      transition: transform 0.3s ease-out;
+    }
+  </style>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Selecting the mobile menu button, menu, and close button
+    var mobileMenuButton = document.getElementById('mobile-menu-button');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var closeButton = document.getElementById('close-button');
+  
+    // Adding a click event listener to the mobile menu button
+    mobileMenuButton.addEventListener('click', function () {
+      // Toggling the 'hidden' class on the mobile menu
+      mobileMenu.classList.toggle('hidden');
+    });
+  
+    // Adding a click event listener to the close button
+    closeButton.addEventListener('click', function () {
+      // Adding the 'hidden' class to hide the mobile menu
+      mobileMenu.classList.add('hidden');
+    });
+  });
+  </script>
