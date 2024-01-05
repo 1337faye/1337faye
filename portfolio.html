@@ -26,7 +26,7 @@
 
 <body class=" bg-cover bg-no-repeat">
 
-  <header class="absolute inset-x-0 top-0 z-50">
+  <header class="absolute inset-x-0 top-0 max-w-[100vw] overflow-x-hidden  z-50">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
@@ -37,7 +37,7 @@
       <div class="flex lg:hidden">
         <button id="mobile-menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 bg-black bg-opacity-25 text-white">
           <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6 z-50" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <svg class="h-6 w-6 z-20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
       </button>
@@ -51,24 +51,23 @@
         <a href="https://www.fiverr.com/s/33p4Dm" class="text-sm font-semibold leading-6 text-white">FIVERR</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="mailto:faye@faye.lol" class="text-sm font-semibold leading-6 text-white">Get In Touch <span aria-hidden="true">&rarr;</span></a>
+        <a href="mailto:faye@faye.lol" class="text-sm font-semibold leading-6 text-white ">Get In Touch <span aria-hidden="true">&rarr;</span></a>
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div id="mobile-menu" class="hidden mobile-menu lg:hidden z-40" role="dialog" aria-modal="true">
+    <div id="wrapper" class="overflow-x-hidden h-screen max-w-[100vw]">
+    <div id="mobile-menu" style="transform: translateX(100%); transition: all 500ms cubic-bezier(0.900, 0.005, 0.000, 1.010);" class=" duration-500 ease-in-out mobile-menu absolute overflow-x-hidden  lg:hidden -mt-18 transform-y-16 h-screen w-screen top-0 z-40" role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div class="fixed inset-0 z-0"></div>
-      <div class="fixed inset-y-0 right-0 z-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="fixed inset-y-0 right-0 z-0 w-full overflow-y-auto  bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Menu</span>
             <h1 style="font-family: 'Stretch Sans';">Menu</h1>
           </a>
-          <button id="menu-button" type="button" class="menu-button -m-2.5  rounded-md p-2.5 bg-black text-black">
+          <button id="close-button"  type="button" class="menu-button -m-2.5 fa-solid fa-x w-8 h-8   rounded-md p-2.5 text-black">
             <span class="sr-only text-black">Close menu</span>
-            <svg id="close-button" class="h-6 w-6 close-button invert" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+           
           </button>
         
         
@@ -89,6 +88,7 @@
         </div>
       </div>
     </div>
+  </div>
   </header>
 
         <section class="min-h-screen bg-cover" style="background-image: url(svg.webp);">
@@ -198,22 +198,25 @@
   </style>
   
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Selecting the mobile menu button, menu, and close button
-    var mobileMenuButton = document.getElementById('mobile-menu-button');
-    var mobileMenu = document.getElementById('mobile-menu');
-    var closeButton = document.getElementById('close-button');
-  
-    // Adding a click event listener to the mobile menu button
-    mobileMenuButton.addEventListener('click', function () {
-      // Toggling the 'hidden' class on the mobile menu
-      mobileMenu.classList.toggle('hidden');
+    document.addEventListener('DOMContentLoaded', function () {
+      // Selecting the mobile menu button, menu, and close button
+      var mobileMenuButton = document.getElementById('mobile-menu-button');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var closeButton = document.getElementById('close-button');
+      mobileMenu.style.transform = 'translateX(100%)';
+      // Adding a click event listener to the mobile menu button
+      mobileMenuButton.addEventListener('click', function () {
+        // Sliding in the mobile menu from the right
+        mobileMenu.style.transform = 'translateX(0)';
+        document.body.style.overflow = 'hidden';
+      });
+
+      // Adding a click event listener to the close button
+      closeButton.addEventListener('click', function () {
+        // Sliding out the mobile menu to the right
+        
+        mobileMenu.style.transform = 'translateX(100%)';
+        document.body.style.overflow = 'auto';
+      });
     });
-  
-    // Adding a click event listener to the close button
-    closeButton.addEventListener('click', function () {
-      // Adding the 'hidden' class to hide the mobile menu
-      mobileMenu.classList.add('hidden');
-    });
-  });
-  </script>
+    </script>
