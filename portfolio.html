@@ -199,24 +199,30 @@
   
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Selecting the mobile menu button, menu, and close button
+      // Selecting the mobile menu button, menu, close button, and wrapper
       var mobileMenuButton = document.getElementById('mobile-menu-button');
       var mobileMenu = document.getElementById('mobile-menu');
       var closeButton = document.getElementById('close-button');
+      var wrapper = document.getElementById('wrapper'); // Add this line
+  
       mobileMenu.style.transform = 'translateX(100%)';
+      wrapper.style.display = 'none'; // Add this line
+  
       // Adding a click event listener to the mobile menu button
       mobileMenuButton.addEventListener('click', function () {
         // Sliding in the mobile menu from the right
         mobileMenu.style.transform = 'translateX(0)';
+        wrapper.style.display = 'block'; // Show the wrapper
         document.body.style.overflow = 'hidden';
       });
-
+  
       // Adding a click event listener to the close button
       closeButton.addEventListener('click', function () {
         // Sliding out the mobile menu to the right
-        
         mobileMenu.style.transform = 'translateX(100%)';
+        wrapper.style.display = 'none'; // Hide the wrapper
         document.body.style.overflow = 'auto';
       });
     });
-    </script>
+  </script>
+  

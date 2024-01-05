@@ -155,9 +155,9 @@
       I develop <span id="changeFontText" style="font-family: 'Times New Roman', Times, serif;" class="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-transparent">websites</span> <br> and <span id="changeFontText" style="font-family: 'Times New Roman', Times, serif;" class="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-violet-400 to-gray-300 bg-clip-text text-transparent drop-shadow-xl">interactive </span>experiences.
     </h1>
     <div class="p-4 m-auto hover:brightness-90 translate-x-20 sm:translate-x-0 text-right sm:text-center flex justify-center w-48 my-8 rounded-lg bg-white transition-colors duration-300">
-      <div class="bg-white  bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-transparent rounded-lg">
+      <div class=" bg-white hover:brightness-90 bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-transparent rounded-lg">
         <a class="block font-bold" href="mailto:faye@faye.lol">Get In Touch</a>
-              </div>
+      </div>
             </div>
             <div class=" z-50 h-0 -translate-x-[30vw] -translate-y-[150px] md:translate-y-[-100px]  md:translate-x-[35vw] xl:translate-x-[525px] xl:translate-y-[-50px] bottom-64 md:right-[50px] xl:right-[200px] z-50 flex flex-col ">
               <a href="https://forthegirls.au/" class="text-white z-50 text-center font-bold mt-6 text-xs md:translate-x-10 translate-y-8 "> like this </a>
@@ -349,26 +349,33 @@
           }
         </style>
 
-        <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          // Selecting the mobile menu button, menu, and close button
-          var mobileMenuButton = document.getElementById('mobile-menu-button');
-          var mobileMenu = document.getElementById('mobile-menu');
-          var closeButton = document.getElementById('close-button');
-          mobileMenu.style.transform = 'translateX(100%)';
-          // Adding a click event listener to the mobile menu button
-          mobileMenuButton.addEventListener('click', function () {
-            // Sliding in the mobile menu from the right
-            mobileMenu.style.transform = 'translateX(0)';
-            document.body.style.overflow = 'hidden';
-          });
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Selecting the mobile menu button, menu, close button, and wrapper
+    var mobileMenuButton = document.getElementById('mobile-menu-button');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var closeButton = document.getElementById('close-button');
+    var wrapper = document.getElementById('wrapper'); // Add this line
 
-          // Adding a click event listener to the close button
-          closeButton.addEventListener('click', function () {
-            // Sliding out the mobile menu to the right
-            
-            mobileMenu.style.transform = 'translateX(100%)';
-            document.body.style.overflow = 'auto';
-          });
-        });
-        </script>
+    mobileMenu.style.transform = 'translateX(100%)';
+    wrapper.style.display = 'none'; // Add this line
+
+    // Adding a click event listener to the mobile menu button
+    mobileMenuButton.addEventListener('click', function () {
+      // Sliding in the mobile menu from the right
+      mobileMenu.style.transform = 'translateX(0)';
+      wrapper.style.display = 'block'; // Show the wrapper
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Adding a click event listener to the close button
+    closeButton.addEventListener('click', function () {
+      // Sliding out the mobile menu to the right
+      mobileMenu.style.transform = 'translateX(100%)';
+      wrapper.style.display = 'none'; // Hide the wrapper
+      document.body.style.overflow = 'auto';
+    });
+  });
+</script>
+
+
