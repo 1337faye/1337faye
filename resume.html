@@ -26,11 +26,35 @@
 </head>
 
 <body class=" bg-cover bg-no-repeat" style="background-image: url(svg.webp);">
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const loader = document.getElementById("loader");
+          loader.style.opacity = 1;
+      
+          function fadeOut() {
+            loader.style.opacity -= 0.1;
+            if (loader.style.opacity <= 0) {
+              loader.style.display = "none";
+            } else {
+              setTimeout(requestAnimationFrame(fadeOut), 500);
+            }
+          }
+      
+          setTimeout(fadeOut, 500);
+        });
+      </script>
+      
 
 
         <section class="min-h-screen bg-cover" style="background-image: url(svg.webp);">
+            
             <header class="absolute inset-x-0 top-0 max-w-[100vw] overflow-x-hidden  z-50">
+                <div id="loader" class="h-screen w-screen bg-black z-[1000] fixed flex flex-col gap-0 place-content-center">
+                    <h1 id="changeFontText" style="font-family: Stretch Sans" class="text-white m-auto uppercase text-4xl font-bold animate-pulse">
+                      Faye
+                    </h1>
+                    
+                  </div>
                 <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                   <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
@@ -110,78 +134,66 @@
                                     
                                     
                                 </div>
-                                <div class="text-center ">
-                                    
-                                    <div class="text-sm leading-normal mt-0 mb-2 text-gray-200 font-bold uppercase">
-                                        <i class="fas fa-map-marker-alt mr-2 text-lg text-white"></i> Melbourne, Australia
+                                <div style="background-color: rgba(255,255,255,0.06);
+                                border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class=" py-6 rounded-xl text-center ">
+                                <h1 class="font-bold text-xs uppercase text-white mb-0"> Status</h1>
+                                    <h1   class="text-3xl text-white font-bold mb-8 tracking-tight mt-4"> Currently Studying I.T @ Monash 👩‍💻</h1>
+                                    <div class="text-sm leading-normal mt-0 mb-1 text-gray-200  font-bold uppercase">
+                                        <i class="fas fa-map-marker-alt mr-2   text-lg text-white"></i> Melbourne, Australia
                                     </div>
                                     <div class="mb-2 text-white mt-10">
                                                                             <i class="fas fa-briefcase mr-2 text-lg text-white"></i> Full Stack Web Developer
                                                                         </div>
                                                                         
                                                                     </div>
-                                                                    <div class="mt-10 py-10 border-t border-gray-300 text-center">
-                                                                        <div class="flex flex-wrap justify-center">
-                                                                            <div class="w-full lg:w-9/12 px-4">
+                                                                    <div  class="text-center">
+                                                                        <div  class="flex py-5 px-2 flex-wrap justify-center">
+                                                                            <div style="background-color: rgba(255,255,255,0.06);
+                                                                            border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class="w-full  rounded-t-xl  py-6 lg:w-12/12 px-8">
+                                                                                <h2 class="text-xl text-white font-bold my-2"> About Me</h2>
                                                                                 <p id="description" class="mb-4 text-lg leading-relaxed text-gray-200">
                                                                                     I am an experienced full stack web developer with a strong background in designing and implementing scalable web applications. I have a passion for creating efficient and user-friendly solutions that meet the needs of clients. With 3+ years of experience and a solid understanding of web development technologies, I am confident in my ability to deliver high-quality results.
                                                                                 </p>
-                                                                                <a id="show-more" href="#" class="font-normal text-pink-500">Show more</a>
+                                                                                
                                                                             </div>
+
                                                                         <!-- Previous Experience -->
-                                                                        <div class="mt-10 py-10 text-white border-t border-gray-300">
-                                                                            <h2 class="text-2xl  font-semibold mb-4">Previous Experience</h2>
+                                                                       <div style="background-color: rgba(255,255,255,0.06);
+                                                                       border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class=" py-5 rounded-b-xl">
+                                                                            <h2 class="text-2xl text-white font-semibold mb-4">Previous Experience</h2>
                                                                             
                                                                             <!-- Experience Item 1 -->
                                                                             <div class="mb-6 text-gray-200">
                                                                                 <h3 class="text-lg font-semibold mb-2"> Prohealth Community Care Services</h3>
-                                                                                <p class="">Position: Web Developer & Systems Admin</p>
-                                                                                <p class="">Duration: January 2019 - Present</p>
-                                                                                <p class="">I developed and maintained their websites and IT resources including physical and digital assets, I deployed resources such as computers and routers, configured firewalls (opnsense) and developed purpose built proprietary web applications for internal company use. </p>
+                                                                                <p class="">Web Developer & Systems Admin</p>
+                                                                                <p class="text-white">January 2019 - Present</p>
+                                                                                <p class="mx-8">I developed and maintained their websites and IT resources including physical and digital assets, I deployed resources such as computers and routers, configured firewalls (opnsense) and developed purpose built proprietary web applications for internal company use. </p>
                                                                             </div>
-                                                                            
+                                                                        </div>
                                                                           
                                                                             <!-- Add more experience items here -->
                                                                             
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                     
-                                                                    <script>
-                                                                        const description = document.getElementById('description');
-                                                                        const showMoreButton = document.getElementById('show-more');
-                                                                        const maxLength = 150;
+                                                                   
                                                                     
-                                                                        const toggleDescription = () => {
-                                                                            if (description.classList.contains('truncate')) {
-                                                                                description.style.maxHeight = 'none';
-                                                                                showMoreButton.textContent = 'Show less';
-                                                                            } else {
-                                                                                description.style.maxHeight = `${maxLength}px`;
-                                                                                showMoreButton.textContent = 'Show more';
-                                                                            }
-                                                                            description.classList.toggle('truncate');
-                                                                        };
-                                                                    
-                                                                        showMoreButton.addEventListener('click', toggleDescription);
-                                                                        toggleDescription();
-                                                                    </script>
-                                                                    
-                                                                    <div class="mt-10 py-10 border-t border-gray-300">
-                                                                        <div class="flex flex-wrap">
-                                                                            <div class="w-full lg:w-6/12 px-4">
+                                                                    <div  class="mt-10 py-10 border-t border-gray-300">
+                                                                        <div  class=" py-6 rounded-xl flex flex-wrap">
+                                                                            <div class="w-full lg:w-6/12 px-4  ">
                                                                                 <h3 class="text-3xl font-semibold text-gray-200">Qualifications</h3>
                                                                                 <div class="mt-5">
-                                                                                    <div class="flex items-center">
-                                                                                        <div>
-                                                                                            <div class="text-sm text-white font-bold uppercase">
+                                                                                    <div class="flex flex-col gap-0 items-center m-auto text-center">
+                                                                                        
+                                                                                            <div class="text-sm text-white font-bold uppercase m-auto">
                                                                                                 VCE
                                                                                             </div>
                                                                                             
-                                                                                            <div class="text-sm text-gray-200">
-                                                                                                Gilson College, Ballarat Clarendon College, Monivae College 
+                                                                                            <div class="text-sm text-gray-200 ">
+                                                                                                Year 12 ✅
                                                                                             </div>
                                                                                            
-                                                                                        </div>
+                                                                                        
                                                                                     </div>
                                                                                     <div class="flex items-center justify-center m-auto mt-5">
                                                                                         <div>
@@ -306,7 +318,8 @@
                                       <!----Footer-->
 
                                     <!----footer-->
-<footer class="bg-white dark:bg-gray-900">
+<footer style="background-color: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class="">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">

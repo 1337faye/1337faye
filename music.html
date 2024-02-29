@@ -31,6 +31,29 @@
 
         <section class="min-h-screen bg-cover" style="background-image: url(svg.webp);">
             <header class="absolute inset-x-0 top-0 max-w-[100vw] overflow-x-hidden  z-50">
+              <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  const loader = document.getElementById("loader");
+                  loader.style.opacity = 1;
+              
+                  function fadeOut() {
+                    loader.style.opacity -= 0.1;
+                    if (loader.style.opacity <= 0) {
+                      loader.style.display = "none";
+                    } else {
+                      setTimeout(requestAnimationFrame(fadeOut), 500);
+                    }
+                  }
+              
+                  setTimeout(fadeOut, 500);
+                });
+              </script>
+              <div id="loader" class="h-screen w-screen bg-black z-[1000] fixed flex flex-col gap-0 place-content-center">
+                <h1 id="changeFontText" style="font-family: Stretch Sans" class="text-white m-auto uppercase text-4xl font-bold animate-pulse">
+                  Faye
+                </h1>
+                
+              </div>
                 <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                   <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
@@ -60,7 +83,8 @@
                 </nav>
                 <!-- Mobile menu, show/hide based on menu open state. -->
                 <div id="wrapper" class="overflow-x-hidden h-screen max-w-[100vw]">
-                <div id="mobile-menu" style="transform: translateX(100%); transition: all 500ms cubic-bezier(0.900, 0.005, 0.000, 1.010);" class=" duration-500 ease-in-out mobile-menu absolute overflow-x-hidden  lg:hidden -mt-18 transform-y-16 h-screen w-screen top-0 z-40" role="dialog" aria-modal="true">
+                <div id="mobile-menu" style="background-color: rgba(255,255,255,0.06);
+                                                                            border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" style="transform: translateX(100%); transition: all 500ms cubic-bezier(0.900, 0.005, 0.000, 1.010);" class=" duration-500 ease-in-out mobile-menu absolute overflow-x-hidden  lg:hidden -mt-18 transform-y-16 h-screen w-screen top-0 z-40" role="dialog" aria-modal="true">
                   <!-- Background backdrop, show/hide based on slide-over state. -->
                   <div class="fixed inset-0 z-0"></div>
                   <div class="fixed inset-y-0 right-0 z-0 w-full overflow-y-auto  bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -134,7 +158,8 @@
     </div>
      
                            
-<footer class="bg-white dark:bg-gray-900">
+<footer style="background-color: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class="">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">

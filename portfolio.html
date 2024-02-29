@@ -27,6 +27,29 @@
 <body class=" bg-cover bg-no-repeat">
 
   <header class="absolute inset-x-0 top-0 max-w-[100vw] overflow-x-hidden  z-50">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const loader = document.getElementById("loader");
+        loader.style.opacity = 1;
+    
+        function fadeOut() {
+          loader.style.opacity -= 0.1;
+          if (loader.style.opacity <= 0) {
+            loader.style.display = "none";
+          } else {
+            setTimeout(requestAnimationFrame(fadeOut), 500);
+          }
+        }
+    
+        setTimeout(fadeOut, 500);
+      });
+    </script>
+    <div id="loader" class="h-screen w-screen bg-black z-[1000] fixed flex flex-col gap-0 place-content-center">
+      <h1 id="changeFontText" style="font-family: Stretch Sans" class="text-white m-auto uppercase text-4xl font-bold animate-pulse">
+        Faye
+      </h1>
+      
+    </div>
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
@@ -94,29 +117,32 @@
         <section class="min-h-screen bg-cover" style="background-image: url(svg.webp);">
             <div class="container mx-auto px-4 py-32">
                 <h2 class="text-3xl font-bold text-white mb-8">Portfolio</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-200">
                     <!-- Project 1 -->
-                    <div class="bg-white bg-opacity-75 backdrop-blur-xl  rounded-lg shadow-lg">
+                    <div style="background-color: rgba(255,255,255,0.06);
+                    border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class=" rounded-lg shadow-lg">
                         <img src="/images/ftg-main.webp" alt="Project 1" class="w-full h-64 object-cover rounded-t-lg">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">For The Girls (forthegirls.au)</h3>
-                            <p class="text-gray-700">For The Girls, a full stack web application built in PHP for a Fiverr client aimed at creating a platform for companionship. Custom made authentication, profile system, password reset and state management. Uses PostgreSQL to hold user information securely. </p>
+                            <p class="">For The Girls, a full stack web application built in PHP for a Fiverr client aimed at creating a platform for companionship. Custom made authentication, profile system, password reset and state management. Uses PostgreSQL to hold user information securely. </p>
                         </div>
                     </div>
                     <!-- Project 2 -->
-                    <div class="bg-white bg-opacity-75 backdrop-blur-xl  rounded-lg shadow-lg">
+                    <div style="background-color: rgba(255,255,255,0.06);
+                    border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);"  class="     rounded-lg shadow-lg">
                         <img src="/images/prohealth-main.png" alt="Project 2" class="w-full h-64 object-cover rounded-t-lg">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">Prohealth (prohealth.care)</h3>
-                            <p class="text-gray-700">Front end project, basic website for the NDIS support provider Prohealth Community Care Services</p>
+                            <p class="">Front end project, basic website for the NDIS support provider Prohealth Community Care Services</p>
                         </div>
                     </div>
                     <!-- Project 3 -->
-                    <div class="bg-white bg-opacity-75 backdrop-blur-xl rounded-lg shadow-lg">
+                    <div style="background-color: rgba(255,255,255,0.06);
+                    border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class=" rounded-lg shadow-lg">
                         <div  alt="Project 3" class="w-full bg-white bg-fit h-64 rounded-t-lg"> </div>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">Coming Soon</h3>
-                            <p class="text-gray-700">Coming soon.</p>
+                            <p class="">Coming soon.</p>
                         </div>
                     </div>
                 </div>
