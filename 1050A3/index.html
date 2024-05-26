@@ -1,54 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rick Astley – Never Gonna Give You Up</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prohealth Community Care Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css" />
     
-    <h1>Rick Astley</h1>
-    <img src="data:image/jpeg;base64,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">
-    <caption>Not my image : <a href="https://www.imdb.com/name/nm1120169/">Source</a> </caption>
-    <h2>Never Gonna Give You Up</h2>
+  </head>
+  <body class="body">
+    <!-- Mobile Navbar -->
+    <nav class="mobile-navbar">
+        <div class="logo-container flex items-center md:hidden">
+          <img src="img/logo.png" alt="Prohealth Logo" class="logo" />
+          <span class="prohealth-text-mobile">Prohealth Community Care Services</span>
+        </div>
+        <button id="mobile-menu-button" class="menu-button">
+          <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+          </svg>
+        </button>
+      </nav>
+      
+      <div id="mobile-menu" class="mobile-menu bg-gray-100 p-4 md:hidden">
+        <ul class="menu-list">
+          <li><a href="#" class="menu-link">Home</a></li>
+          <li><a href="#" class="menu-link">Contact</a></li>
+          <li><a href="#" class="menu-link">Services</a></li>
+          <li><a href="#" class="menu-link">Apply</a></li>
+        </ul>
+      </div>
+      
+      <!-- Desktop Navbar -->
+      <nav class="desktop-menu hidden items-center justify-between border-b bg-gradient-to-br from-purple-100 to-white p-4 md:flex">
+        <div class="logo-container-desktop flex items-center">
+          <img src="img/logo.png" alt="Prohealth Logo" class="desktop-logo" />
+          <span class="desktop-text">Prohealth <br /> Community Care Services</span>
+        </div>
+        <ul class="desktop-menu-list flex space-x-4">
+          <li><a href="#" class="desktop-menu-link">Home</a></li>
+          <li><a href="#" class="desktop-menu-link">Contact</a></li>
+          <li><a href="#" class="desktop-menu-link">Services</a></li>
+          <li><a href="#" class="desktop-menu-link">Apply</a></li>
+        </ul>
+      </nav>
+      
 
-    <p> <strong>"Never Gonna Give You Up"</strong> is a song recorded by British singer and
-        songwriter <a href="https://www.rickastley.co.uk/">Rick Astley</a> , released as a single on 27 July 1987.
-        <br> <br>
-        In 2004, <strong>"Never Gonna Give You Up"</strong> was voted number 28 in <strong>
-            50 Most Awesomely
-            Bad Songs... <em>Ever</em>  by VH1
-        </strong>.
-        <br> <br>
-        The music video for the song has become the basis for the <em>"Rickrolling"</em>
-        Internet meme, leading the song to also be referred to as <em>
-            "The Rickroll
-            Song"
-        </em>.
-    </p>
+    <!-- Main Content -->
+    <main class="p-6">
+      <!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
 
-    <h3>Lyrics</h3>
-    <p>Never gonna give you up<br>
-        Never gonna let you down<br>
-        Never gonna run around and desert you<br>
-        Never gonna make you cry<br>
-        Never gonna say goodbye<br>
-        Never gonna tell a lie and hurt you
-    </p>
-    <p>Lyrics &copy; 1987 Stock Aitken Waterman and RCA Records</p>
+<section id="hero-1618">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">
+                <svg class="cs-chevron" width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.7">
+                    <path d="M0.621948 7.49889L6.40262 15L10.343 15L4.56231 7.49889L10.343 -4.2492e-07L6.40262 -2.52681e-07L0.621948 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M7.62195 7.49889L13.4026 15L17.343 15L11.5623 7.49889L17.343 -4.2492e-07L13.4026 -2.52681e-07L7.62195 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M14.7789 7.49889L20.5596 15L24.5 15L18.7193 7.49889L24.5 -4.2492e-07L20.5596 -2.52681e-07L14.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M22.7789 7.49889L28.5596 15L32.5 15L26.7193 7.49889L32.5 -4.2492e-07L28.5596 -2.52681e-07L22.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M30.7789 7.49889L36.5596 15L40.5 15L34.7193 7.49889L40.5 -4.2492e-07L36.5596 -2.52681e-07L30.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M38.7789 7.49889L44.5596 15L48.5 15L42.7193 7.49889L48.5 -4.2492e-07L44.5596 -2.52681e-07L38.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    </g>
+                </svg>
+                
+                <svg class="cs-chevron" width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.7">
+                    <path d="M48.3781 7.49889L42.5974 15L38.657 15L44.4377 7.49889L38.657 -4.2492e-07L42.5974 -2.52681e-07L48.3781 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M41.3781 7.49889L35.5974 15L31.657 15L37.4377 7.49889L31.657 -4.2492e-07L35.5974 -2.52681e-07L41.3781 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M34.2211 7.49889L28.4404 15L24.5 15L30.2807 7.49889L24.5 -4.2492e-07L28.4404 -2.52681e-07L34.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M26.2211 7.49889L20.4404 15L16.5 15L22.2807 7.49889L16.5 -4.2492e-07L20.4404 -2.52681e-07L26.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M18.2211 7.49889L12.4404 15L8.50004 15L14.2807 7.49889L8.50004 -4.2492e-07L12.4404 -2.52681e-07L18.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M10.2211 7.49889L4.4404 15L0.500041 15L6.28071 7.49889L0.500042 -4.2492e-07L4.4404 -2.52681e-07L10.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    </g>
+                </svg>
+            </span>
+            <h1 class="cs-title-small">Prohealth</h1>
+            <h1 class="cs-title">Taking care of you</h1>
+            <a href="" class="cs-button-solid">Get in Touch</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/check-circle.svg" alt="icon" width="48" height="48">
+                <h3 class="cs-h3">In Home Care</h3>
+                <p class="cs-item-text">
+                    Care provided in the comfort of your own home, ensuring that you are surrounded by the people you love.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/speedometer.svg" alt="icon" width="48" height="48">
+                <h3 class="cs-h3">Highly Trained Staff</h3>
+                <p class="cs-item-text">
+                    Our staff are highly trained and experienced in providing care and support to individuals.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like.svg" alt="icon" width="48" height="48">
+                <h3 class="cs-h3">Person Centered Care</h3>
+                <p class="cs-item-text">
+                   Care tailored to the individual, ensuring that the person is at the centre of their care and support.
+                </p>
+            </li>
+        </ul>
+    </div>
 
-    <h3>Cover Versions</h3>
-    <ul>
-        <li> In 1997, French boy band 2Be3 covered the song under the name "Toujours là
-            pour toi", which had success in France (No. 4) and Belgium (Wallonia) (No. 12).</li>
-            <li> In 1998, an Italian cover entitled "Non ti lascerò" was made by
-            Fiorello.</li>
-            <li>Eurobeat artist Kevin Johnson covered the song in 2004 for the album Super
-            Eurobeat 149.</li>
-    </ul>
-    <h3>Rick-rolling</h3>
+    <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting7-m.jpeg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting7.jpg">
+        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting7.jpg" alt="meeting" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+                                
 
 
-    <a href="page2.html">Second Page</a>
-</body>
+      <section class="about-section" data-aos="fade-right">
+        <div class="about-container">
+          <h2 class="about-header">About Us</h2>
+          <p class="about-subheader">Prohealth Community Care Services is an organisation that is committed to providing person-centred care based on individualised care plans that recognise the uniqueness of each person.</p>
+          <div class="about-grid">
+            <div>
+              <h3 class="about-item-header">5+ Years</h3>
+              <p class="about-item-paragraph">of shaping lives</p>
+            </div>
+            <div>
+              <h3 class="about-item-header">20+</h3>
+              <p class="about-item-paragraph">staff, dedicated to your support</p>
+            </div>
+            <div>
+              <h3 class="about-item-header">20+ Awards</h3>
+              <p class="about-item-paragraph">won, underscoring our dedication to innovation</p>
+            </div>
+            <div>
+              <h3 class="about-item-header">99% Success</h3>
+              <p class="about-item-paragraph">reflects our client-centric approach</p>
+            </div>
+          </div>
+        </div>
+        <img src="img/office.jpg" alt="About Us Image" class="office-image" />
+      </section>
+
+      <section class="contact-section" data-aos="fade-up">
+        <h2 class="contact-header">Get In Touch</h2>
+        <div class="mt-4 flex flex-col items-center justify-center space-y-6 md:flex-row md:space-x-16 md:space-y-0">
+          <div class="text-center">
+            <i class="fas fa-envelope fa-3x contact-icon"></i>
+            <p id="email-to-copy" class="contact-method">info@prohealth.care</p>
+            <button id="copy-email-button" class="copy-button">Copy Email Address</button>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-phone fa-3x contact-icon"></i>
+            <p id="phone-to-copy" class="contact-method">0434 743 584</p>
+            <button id="copy-phone-button" class="copy-button">Copy Phone Number</button>
+          </div>
+        </div>
+      </section>
+      
+
+      <main>
+        <section class="location-section" data-aos="fade-up">
+          <h2 class="section-title">Our Location</h2>
+          <p class="section-description">Based in Victoria, available in Melbourne, Ballarat, and Hamilton</p>
+          <p class="section-address">Office location: Level 1 78 Main Rd St Albans Victoria 3021</p>
+          <div class="map-container">
+            <div class="map-wrapper">
+              <iframe class="map-iframe" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Level%201%2078%20main%20road%20St%20Albans%20Victoria%203021+(Prohealth%20Community%20Care%20Services)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+          </div>
+        </section>
+        <footer class="site-footer">
+            <div class="footer-logo">
+              <img src="img/logo.png" alt="Prohealth Logo" class="footer-logo-image" />
+              <span class="footer-logo-text">Prohealth</span>
+            </div>
+            <div class="footer-links">
+              <a href="#" class="footer-link">Home</a>
+              <a href="#" class="footer-link">Contact</a>
+              <a href="#" class="footer-link">Services</a>
+              <a href="#" class="footer-link">Apply</a>
+            </div>
+            <div class="footer-copyright">&copy; 2024 Prohealth. All rights reserved.</div>
+          </footer> 
+      </main>
+      
+      
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <script src="index.js"></script>
+    
+  </body>
+  
 </html>
