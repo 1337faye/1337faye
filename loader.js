@@ -1,5 +1,5 @@
-
-  document.addEventListener("DOMContentLoaded", function() {
+console.log("test");
+document.addEventListener("DOMContentLoaded", function() {
     const loader = document.getElementById("loader");
     loader.style.opacity = 1;
 

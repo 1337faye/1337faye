@@ -1,107 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta name="theme-color" content="#230293">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faye - Home</title>
-    <meta name="title" content="Faye - Home">
-<meta name="description" content="I'm Faye, a passionate web developer on a mission to create extraordinary and captivating websites. I'm dedicated to delivering exceptional solutions that exceed clients' expectations.">
-<meta name="keywords" content="faye, web development, web, fiverr, html, css js, tailwind, PHP, front end, full stack">
-<meta name="robots" content="index, follow">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="English">
-<meta name="revisit-after" content=" days">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="outputstyles.css">
-    
-    
-
-    <style>
-
-
-
-
-        .gradient-div {
-            background: linear-gradient(to bottom, rgb(124 58 237), black);
-            transition: all 0.3s ease;
-        }
-        .gradient-div:hover {
-            background: linear-gradient(to bottom, transparent, rgb(109 40 217));
-        }
-        
-    </style>
-    <style>
-        @font-face {
-            font-family: 'Stretch Sans';
-            src: url('STRRETCH-SANS.otf') format('opentype');
-        }
-
-        .custom-shape-divider-bottom-1704353111 {
-    position: absolute;
-    
-    left: 0;
-    width: 100%;
-    min-width: 1000px;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1704353111 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.6px);
-    height: 150px;
-}
-
-.custom-shape-divider-bottom-1704353111 .shape-fill {
-    fill: #0F172A;
-}
-        
-        
-    </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const gradientDivs = document.querySelectorAll(".gradient-div");
-
-        document.addEventListener("mousemove", function(event) {
-          const mouseX = event.pageX;
-          const mouseY = event.pageY;
-          const windowWidth = window.innerWidth;
-          const windowHeight = window.innerHeight;
-
-          gradientDivs.forEach(function(div) {
-            const rect = div.getBoundingClientRect();
-            const divX = rect.left;
-            const divY = rect.top;
-            const divWidth = rect.width;
-            const divHeight = rect.height;
-
-            const gradientX = (mouseX - divX - divWidth / 2) / divWidth;
-            const gradientY = (mouseY - divY - divHeight / 2) / divHeight;
-
-            const gradient = `radial-gradient(circle at ${gradientX * 100}% ${gradientY * 100}%, rgb(124 58 237), black),
-    url(https://grainy-gradients.vercel.app/noise.svg)`;
-            div.style.background = gradient;
-          });
-        });
-      });
-    </script>
-</head>
-
-
-
-<body style="background-image: url(svg.webp);" class="overflow-x-hidden w-screen bg-auto bg-[#0e0085]">
-    <!-- Navbar -->
-    <script>
+   <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Faye - Home</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="styles.css">
+      <style>
+         .spotify-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+         gap: 2rem;
+         padding: 2rem;
+      
+  
+         }
+         .spotify-embed {
+         
+         border-radius: 12px;
+         
+         
+         }
+      </style>
+   </head>
+   <script>
       document.addEventListener("DOMContentLoaded", function() {
         const loader = document.getElementById("loader");
         loader.style.opacity = 1;
-    
+      
         function fadeOut() {
           loader.style.opacity -= 0.1;
           if (loader.style.opacity <= 0) {
@@ -110,324 +41,540 @@
             setTimeout(requestAnimationFrame(fadeOut), 500);
           }
         }
-    
+      
         setTimeout(fadeOut, 500);
       });
-    </script>
-    <div id="loader" class="h-screen w-screen bg-black z-[1000] fixed flex flex-col gap-0 place-content-center">
-      <h5 id="changeFontText" style="font-family: Stretch Sans" class="text-white m-auto uppercase text-4xl font-bold animate-pulse">
-        Faye
-      </h5>
-      
-    </div>
-    <header class="absolute inset-x-0 top-0 max-w-[100vw] overflow-x-hidden  z-50">
-      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">faye.lol</span>
-              <a href="index.html" id="fayetypography" style="font-family: 'Stretch Sans';" id="changeFontText" class="transition-all duration-500 tracking-wide font-bold text-white hover:tracking-[1rem] changeFontText"> FAYE</a>
-          </a>
-        </div>
-        <div class="flex lg:hidden">
-          <button id="mobile-menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 bg-black bg-opacity-25 text-white">
-            <span class="sr-only">Open main menu</span>
-            <svg class="h-6 w-6 z-20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+   </script>
+   <body class=" min-h-screen flex flex-col place-content-center bg-black">
+      <div id="loader" class="h-screen w-screen bg-black z-[1000] fixed top-0 flex flex-col gap-0 place-content-center">
+         <h5   class="text-white poppins-light m-auto  text-4xl animate-pulse">
+            faye
+         </h5>
+      </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2  h-8 md:h-12  z-[40] place-content-center flex flex-row gap-2 ">
+         <div class=" bg-indigo-600 opacity-75  w-32 h-full rounded-xl flex place-content-center m-auto ">
+            <p class="poppins-light text-white m-auto text-center text-xs">
+               scroll to see more
+            </p>
+         </div>
+         <div class="bg-indigo-600 opacity-75 h-full w-12 flex place-content-center m-auto rounded-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 m-auto w-5 invert" viewBox="0 0 448 512">
+               <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+               <path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z"/>
             </svg>
-        </button>
-        
-        </div>
-        <div  class="font-bold tracking-wide hidden lg:flex lg:gap-x-12">
-          <a href="portfolio.html" class="text-sm font-semibold leading-6 text-white">PORTFOLIO</a>
-          <a href="resume.html" class="text-sm font-semibold leading-6 text-white">RESUME</a>
-          <a href="music.html" class="text-sm font-semibold leading-6 text-white">MUSIC</a>
-          
-          <a href="https://www.fiverr.com/s/33p4Dm" class="text-sm font-semibold leading-6 text-white">FIVERR</a>
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="mailto:faye@faye.lol" class="text-sm font-semibold leading-6 text-white ">Get In Touch <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </nav>
-      <!-- Mobile menu, show/hide based on menu open state. -->
-      <div id="wrapper" class="overflow-x-hidden h-screen max-w-[100vw]">
-      <div id="mobile-menu" style="transform: translateX(100%); transition: all 500ms cubic-bezier(0.900, 0.005, 0.000, 1.010);" class=" duration-500 ease-in-out mobile-menu absolute overflow-x-hidden  lg:hidden -mt-18 transform-y-16 h-screen w-screen top-0 z-40" role="dialog" aria-modal="true">
-        <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-0"></div>
-        <div class="fixed inset-y-0 right-0 z-0 w-full overflow-y-auto  bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Menu</span>
-              <h1 style="font-family: 'Stretch Sans';">Menu</h1>
+         </div>
+      </div>
+      <section class="overflow-hidden max-w-[2400px]  rounded-xl w-full grid m-auto h-screen p-4 h-full grid-cols-4 gap-4 wrapper">
+         <div class="blur -z-50"></div>
+         <div class="blur -z-50"></div>
+         <div class="blur -z-50"></div>
+         <!------Resume-->
+         <div style="background-image: url('img/laser.webp');"  class="col-span-2 relative bg-cover bg-white rounded-lg p-4 flex place-content-center flex-col justify-between">
+            <h1 class="poppins-bold w-full h-auto text-center text-white text-xl lg:text-5xl m-auto">
+               RESUME
+            </h1>
+            <a href="resume.html" style="background-color: rgba(255,255,255,0.15); backdrop-filter: blur(2px);" class="hover:brightness-125 absolute bottom-4 left-1/2 -translate-x-1/2 w-16 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group ">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75  poppins-light rounded-md group-hover:bg-opacity-0 text-white">
+            view
+            </span>
             </a>
-            <button id="close-button"  type="button" class="menu-button -m-2.5 fa-solid fa-x w-8 h-8   rounded-md p-2.5 text-black">
-              <span class="sr-only text-black">Close menu</span>
-             
-            </button>
-          
-          
-          </div>
-          <div class="mt-6 flow-root">
-            <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="space-y-2 py-6">
-                <a href="portfolio.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">PORTFOLIO</a>
-                <a href="resume.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">RESUME</a>
-                <a href="music.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">MUSIC</a>
-
-                <a href="https://www.fiverr.com/s/33p4Dm" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">FIVERR</a>
-              </div>
-              <div class="py-6">
-                <a href="mailto:faye@faye.lol" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Get In Touch</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </header>
-
-<section class=" ">
-  <div  class="gap-4 p-16 bg-cover backdrop-blur-xl  overflow-hidden bg-fixed bg-right" style="height: 100vh; min-height: 700px;max-height: 1000 px;background-image: url(svg.webp);" id="hero-section">
-    <h1  class="font-bold   text-5xl lg:text-6xl m-auto text-right sm:text-center text-white max-w-3xl mt-16  min-[500px]:mt-24">
-      I develop <span id="changeFontText2" style="font-family: 'Times New Roman', Times, serif;" class="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-transparent">websites</span> <br> and <span id="changeFontText" style="font-family: 'Times New Roman', Times, serif;" class="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-violet-400 to-gray-300 bg-clip-text text-transparent drop-shadow-xl">interactive </span>experiences.
-    </h1>
-    <h2 class="font-semibold mt-2 text-xs sm:text-center text-right bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-transparent">
-      <a href="music.html">(i also  make music)</a>
-    </h2>
-    <div class="p-4 m-auto hover:brightness-90 translate-x-20 sm:translate-x-0 text-right sm:text-center flex justify-center w-48 my-8 rounded-lg bg-white transition-colors duration-300">
-      <div class=" bg-white hover:brightness-90 bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-transparent rounded-lg">
-        <a class="block font-bold" href="mailto:faye@faye.lol">Get In Touch</a>
-      </div>
-            </div>
-            <div class=" z-50 h-0 -translate-x-[30vw] -translate-y-[150px] md:translate-y-[-100px]  md:translate-x-[35vw] xl:translate-x-[525px] xl:translate-y-[-50px] bottom-64 md:right-[50px] xl:right-[200px] z-50 flex flex-col ">
-              <a href="https://forthegirls.au/" class="text-white z-50 text-center font-bold mt-6 text-xs md:translate-x-10 translate-y-8 "> like this </a>
-              <a href="https://forthegirls.au/" class=" z-60 bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-xs text-transparent text-center font-bold text-xl md:translate-x-10 translate-y-8"> (forthegirls.au) </a>
-            <img alt="Arrow pointing at web page" src="arrow.svg" class="invert rotate-[90deg] lg:rotate-180 h-32 translate-y-2" style="z-index: 9999;">
-          </div>
-            <div id="floatingdiv" class="w-[60rem] sm:w-auto lg:w-[60rem] m-auto  col-span-2 rounded-xl pt-1 md:pt-4 gradient-div -mb-1" style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); opacity: 0.5; box-shadow: 0 30px 400px 8px rgba(255, 255, 255, 0.5);">
-              <div class="h-8 w-max flex place-content-center md:mb-4 gap-2">
-                <div class=" h-5 w-5 m-auto rounded-full  bg-red-500 ml-4">
-
-                </div>
-                <div class=" h-5 w-5 m-auto rounded-full  bg-yellow-500 ">
-
-                </div>
-                <div class=" h-5 w-5 m-auto rounded-full  bg-green-500 ">
-
-                </div>
-
-              </div>
-              <div class="relative inset-0 bg-opacity-25 rounded-b-xl rounded-t-none w-full h-full overflow-hidden">
-                <a href="https://forthegirls.au" target="_blank" aria-label="For The Girls - Website">
-                  <img alt="For The Girls web page screenshot" src="/images/ftg-main.webp" class="w-auto h-auto" style="cursor: pointer;">
-                </a>
-              </div>
-            </div>
-          </div>
-          
-        </section>
-
-
-
-        <!----Section 2 -->
-
-
-
-
-
-
-
-
-        <!-----Section 3-->
-        <bg  style="background-image: url(svg.webp);">
-        <section class="relative   overflow-hidden bg-gradient-to-br from-[#0e0085] to-violet-600 px-6 py-24 sm:py-32 lg:px-8">
-         
-
-          <div class="mx-auto max-w-2xl lg:max-w-4xl text-white">
-            <img alt="For The Girls logo" class="mx-auto w-48" src="images/ftg-logo.webp" alt="For The Girls Logo">
-            <figure class="mt-10">
-              <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                <p>“Faye has been amazing to work with, I am really happy with my website.  The ongoing support has been awesome. Faye listened to every step of the way and tested and tweaked functions to get everything working perfectly, I will definitely be returning with my next project. ”</p>
-              </blockquote>
-              <div class="flex justify-center mt-2">
-                <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z" />
-                </svg>
-                <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z" />
-                </svg>
-                <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z" />
-                </svg>
-                <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z" />
-                </svg>
-                <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z" />
-                </svg>
-                <p class="text-white font-bold ml-2"> 5 / 5</p>
-              </div>
-              <figcaption class="mt-10 mb-16">
-                <img alt="Sera's (testimonial) Fiverr profile picture" class="mx-auto h-10 w-10 rounded-full" src="/images/serapfp.webp" alt="Sera's profile picture">
-                <div class="mt-4 flex items-center justify-center space-x-3 text-base">
-                  <div class="font-semibold text-white">Sera</div>
-                  <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-white">
-                    <circle cx="1" cy="1" r="1" />
+         </div>
+         <!-- Socials -->
+         <div class="bg-transparent md:bg-gradient-to-tr from-black to-slate-900 backdrop-opacity-40 drop-shadow-3xl  rounded-xl col-span-2 md:col-span-1 flex items-center flex-col justify-center overflow-hidden">
+            <div class="gap-y-4 w-full poppins-light p-1 md:px-4 grid">
+               <a rel="noopener noreferrer" href="https://discord.com/users/238889021940432906" class="flex mb-0 bg-gradient-to-tr from-indigo-500 to-indigo-900 hover:brightness-125 md:px-4 w-full md:w-32 rounded m-auto h-12 place-content-center flex-row">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 m-auto md:mr-4 invert" viewBox="0 0 640 512">
+                     <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                     <path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"/>
                   </svg>
-                  <div class="text-white">For The Girls</div>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="custom-shape-divider-bottom-1704353111">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-            </svg>
-          </div>
-        </section>
-        </bg>
-        </body>
-        </html>
-
-
-        <!----Shape div-->
-
-
-
-        <section id="about"  class="bg-slate-900 px-6 py-24 sm:py-32 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:max-w-4xl text-white">
-            <h2 class="text-4xl font-bold mb-8">About Me</h2>
-            <div class="flex flex-col md:flex-row justify-between items-center">
-              <div class="md:w-1/2">
-                <p class="text-lg leading-7 mb-8">
-                  I'm Faye, a passionate web developer on a mission to create extraordinary and captivating websites. I'm dedicated to delivering exceptional solutions that exceed clients' expectations.
-                </p>
-                <p class="text-lg leading-7">
-                  Specializing in both front-end and full-stack development, I harness the power of modern technologies like HTML5, Tailwind, and PHP to craft immersive and interactive user experiences. Let's collaborate and transform your ideas into something truly remarkable.
-                </p>
-              </div>
-              <div class="md:w-1/2 mt-10 md:mt-0">
-                <img src="https://fiverr-res.cloudinary.com/image/upload/t_profile_original,q_auto,f_auto/v1/attachments/profile/photo/e61b691de9b8b5c7e6dbf4464e08d5a2-1668560406206/54c67376-1f3a-4b06-b849-d1e1b51d81d2.jpg" alt="Faye's Profile Picture" class="rounded-full w-64 h-64 mx-auto md:mx-0">
-              </div>
+                  <span class="m-auto invert md:block">discord</span>
+               </a>
+               <a rel="noopener noreferrer" href="mailto:faye@faye.lol" class="flex bg-gradient-to-tr from-indigo-500 to-indigo-900 mb-0 hover:brightness-125 md:px-4 w-full md:w-32 rounded m-auto h-12 place-content-center flex-row">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 m-auto md:mr-4 invert" viewBox="0 0 512 512">
+                     <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                     <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                  </svg>
+                  <span class="m-auto invert md:block">email</span>
+               </a>
+               <a rel="noopener noreferrer" href="https://www.linkedin.com/in/faye-ayorinde-0665b6254/" class="flex bg-gradient-to-tr from-indigo-500 to-indigo-900 hover:brightness-125 md:px-4 w-full md:w-32 rounded m-auto h-12 place-content-center flex-row">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 m-auto md:mr-4 invert" viewBox="0 0 448 512">
+                     <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                     <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+                  </svg>
+                  <span class="m-auto invert  md:block">linkedin</span>
+               </a>
             </div>
-          </div>
-        </section>
-
-        <!----footer-->
-
-
-        <footer style="background-color: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class="text-white">
-          <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-              <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
-                    <a href="faye.lol" class="flex items-center">
-                        
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FAYE</span>
-                    </a>
-                </div>
-                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                  
+         </div>
+         <!-- Display image -->
+         <div style="background-image: url('img/spline.png'); background-position: center; background-size: contain; background-repeat: no-repeat;"  class="bg-center border border-slate-900 bg-black bg-cover col-span-1 row-span-2 hidden relative md:block rounded-xl p-4 flex items-center justify-center">
+            <p class="text-white text-center poppins-bold hidden text-base md:text-xl drop-shadow-3xl mt-1 md:mt-8  m-auto  ">3D.</p>
+         </div>
+         <!-- Me -->
+         <div  class="col-span-4 md:col-span-2 flex-col rounded-xl p-4 text-white flex items-center place-content-center ">
+            <p class="flex flex-row place-content-center poppins-light ml-0 md:ml-4  mt-0 m-auto mb-0 ">
+               hey  <span class="m-auto ml-1 mr-2"><img src="img/wave.webp" class="h-4 w-4"> </span>, i'm
+            </p>
+            <h1  class="poppins-bold text-3xl md:text-5xl  m-auto md:ml-4 m-auto mb-2 ml-0 mt-0 ">
+               FAYE
+            </h1>
+            <p class="flex flex-row place-content-center poppins-light ml-0 md:ml-4  mt-0 m-auto mb-0 ">i'm a web developer from melbourne, australia, <br> <br>  i specialise in web development, marketing & graphic design (i also make music) </p>
+            <p class=" ml-0 md:ml-4 m-auto mt-0 mb-0 poppins-light">
+               <br>
+               my favourite colour is <span class="h-8 w-8 mr-1 border border-indigo-500 bg-white text-indigo-500 poppins-bold pl-1 text-center"> purple </span>,  or maybe indigo?
+            </p>
+         </div>
+         
+         <div  style="background-image: url('img/web-dev/sites.png'); " class="relative hidden cursor-pointer col-span-1group bg-black drop-shadow-xl bg-cover bg-[50%]  rounded-xl p-4 flex items-center flex place-content-center duration-500 ease-in-out transition justify-center">
+            <p class="text-white text-center poppins-bold text-base md:text-xl drop-shadow-3xl mt-1 md:-mt-0.5 m-auto mix-blend-difference  ">projects.</p>
+            <p style="background-color: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px);" class="absolute w-8 h-8 md:w-12 md:h-12 top-4 right-4 rounded-md text-white   flex place-content-center justify-center">
+               <i class="fa fa-plus text-white m-auto group group-hover:rotate-[180deg] duration-250 transition"></i>
+            </p>
+         </div>
+         
+         <!-- Projects -->
+         <div id="openProjectsMenu" style="background-image: url('img/web-dev/sites.png'); " class="relative cursor-pointer col-span-2 group bg-black drop-shadow-xl bg-cover bg-[50%]  rounded-xl p-4 flex items-center flex place-content-center duration-500 ease-in-out transition justify-center">
+            <p class="text-white text-center poppins-bold text-base md:text-xl drop-shadow-3xl mt-1 md:-mt-0.5 m-auto mix-blend-difference  ">projects.</p>
+            <p style="background-color: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px);" class="absolute w-8 h-8 md:w-12 md:h-12 top-4 right-4 rounded-md text-white   flex place-content-center justify-center">
+               <i class="fa fa-plus text-white m-auto group group-hover:rotate-[180deg] duration-250 transition"></i>
+            </p>
+         </div>
+         <!-- Music -->
+         <div id="openMusicMenu" style="background-image: url(img/music/music.png);" class="bg-cover col-span-2 cursor-pointer bg-slate-300 relative group rounded-xl p-4 flex place-content-center items-center justify-center">
+            <p class="text-white text-center poppins-bold text-5xl md:text-6xl lg:text-8xl">music.</p>
+            <p style="border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px);" class="absolute bg-black w-8 h-8 md:w-12 md:h-12 top-4 right-4 rounded-md text-white flex place-content-center justify-center">
+               <i class="fa fa-plus text-white m-auto group-hover:rotate-180 transition duration-250"></i>
+            </p>
+         </div>
+         <div id="fullScreenMusicMenu" style="z-index: 9999999;" class="hidden  fixed inset-4 m-8 drop-shadow-xl  backdrop-blur-xl p-16 md:px-16 px-4 bg-black rounded-lg flex flex-col justify-center items-center">
+            <button id="closeMusicMenu" class="absolute top-4 right-4 text-3xl text-white">✕</button>
+           
+            <h2 class="text-3xl poppins-bold text-white absolute top-4 m-auto">music.</h2>
+            <div class="m-auto flex place-content-center gap-4 flex-wrap mb-4">
+               <a href="https://open.spotify.com/artist/20ZFJndFVBFx0pQ6owonDB?si=jKNNfKS3TkWPDmwR-5gQEg" class="hover:brightness-90 bg-opacity-25 bg-green-500 px-4 py-2 font-semibold text-white place-content-center inline-flex items-center space-x-2 rounded-md">
+                     <p class=" fa-brands fa-spotify text-center"></p>
+                     <span>Spotify</span>
+               </a>
+               <a href="https://www.youtube.com/@fayenotfaye" class="hover:brightness-90 bg-opacity-25 bg-red-500 px-4 py-2 font-semibold text-white place-content-center inline-flex items-center space-x-2 rounded-md">
+                     <p class=" fa-brands fa-youtube text-center"></p>
+                     <span>YouTube</span>
+               </a>
+               <a href="https://music.apple.com/au/artist/1337faye/1723561046" class="hover:brightness-90 bg-opacity-25 bg-red-600 px-4 py-2 font-semibold text-white place-content-center inline-flex items-center space-x-2 rounded-md">
+                     <p class=" fa-brands fa-itunes-note text-center"></p>
+                     <span>Apple Music</span>
+               </a>
+               
             </div>
-            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© insert current year :  <a href="faye.lol" class="hover:underline">faye.lol</a>. No Rights Reserved ):
-                </span>
-                <div class="flex mt-4 sm:justify-center sm:mt-0">
-                    
-                    <a href="https://discord.com/users/238889021940432906" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                              <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                          </svg>
-                        <span class="sr-only">Discord community</span>
-                    </a>
-                    
-                    <a href="https://github.com/1337faye" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                              <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                        </svg>
-                        <span class="sr-only">GitHub account</span>
-                    </a>
-                   
-                </div>
+           
+           
+            <div id="songsGrid" class="spotify-grid w-full h-full relative overflow-y-scroll">
+               
+      
             </div>
-          </div>
-        </footer>
 
-
-
-        <script>
-          const textElement = document.getElementById('changeFontText');
-          const fonts = ['Arial', 'Times New Roman', 'Verdana'];
-          let currentIndex = 0;
-          let originalFont = textElement.style.fontFamily;
-
-          let intervalId;
-
-          textElement.addEventListener('mouseover', () => {
-            intervalId = setInterval(() => {
-              currentIndex = (currentIndex + 1) % fonts.length;
-              textElement.style.fontFamily = fonts[currentIndex];
-            }, 500);
-          });
-
-          textElement.addEventListener('mouseout', () => {
-            // Stop the font-changing interval when not hovered
-            clearInterval(intervalId);
-            textElement.style.fontFamily = originalFont;
-          });
-        </script>
-
-
-        <style>
-          #floatingdiv {
-            transition: transform 0.3s ease-out;
-          }
-        </style>
-        
-
-
-        <style>
-          #floatingdiv {
-            transition: transform 0.3s ease-out;
-          }
-        </style>
-
+            <div class="absolute left-0 bottom-12 w-full h-32  bg-gradient-to-t from-black to-transparent">
+               
+            </div>
+       
+         </div>
+         </div>
+      </section>
+      <section class="min-h-screen px-4 pt-4  w-full ">
+         <div class="h-full w-full bg-gradient-to-tr from-slate-900 to-black flex place-content-center  rounded-t-3xl ">
+            <h1 class="m-auto text-white">
+               Coming Soon
+            </h1>
+         </div>
+      </section>
+      <div id="overlay" style="z-index: -1 ;" class="fixed top-0 left-0  bg-black hidden pointer-events-none h-screen w-screen bg-opacity-50 backdrop-blur-[2px] ">
+      </div>
+      <div id="fullScreenMenu" class="hidden z-[101]  fixed inset-4 m-8  drop-shadow-xl bg-opacity-90 backdrop-blur-xl p-16 md:px-16 px-4 bg-black rounded-lg flex flex-col justify-center items-center z-50">
+         <button id="closeMenu" class="absolute top-4 right-4  text-3xl text-white">✕</button>
+         <h2 class="text-3xl poppins-bold text-white  absolute top-4 m-auto">projects.</h2>
+         <div id="project1" class="h-full  w-full rounded-xl">
+            <div class="w-full h-full max-w-full max-h-screen grid grid-cols-2 grid-rows-2 gap-4 p-4">
+               <!-- First Box (Takes up 2 cells) -->
+               <a href="https://monashemerging.tech" style="background-image: url('img/mnetmac.png'); background-position: contain; background-repeat: no-repeat; background-size: cover;" class="project-content  bg-center col-span-2 flex items-center gap-2 justify-center hover:brightness-125  text-white text-2xl  font-bold rounded-lg">
+               </a>
+               <!-- Second Box -->
+               <div class="project-content flex items-center justify-center col-span-2 p-4 xl:col-span-1 place-content-center text-white flex-col text-2xl font-bold rounded-lg">
+                  <h1 class="text-white poppins-semibold text-base m-auto mb-2 md:mb-6 text-center   mt-0 lg:text-3xl">
+                     Monash Nexus for Emerging Technologies Website
+                  </h1>
+                  <a href="https://monashemerging.tech" class="inline-flex  items-center justify-center p-5 text-base font-medium text-white hover:brightness-125 rounded-lg bg-gradient-to-tr from-indigo-500 to-indigo-900 ">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 invert mr-4" viewBox="0 0 512 512">
+                        <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/>
+                     </svg>
+                     <span class="w-full poppins-light">check it out</span>
+                     <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                     </svg>
+                  </a>
+               </div>
+               <!-- Third Box -->
+               <div class=" project-content flex p-4 hidden xl:inline flex place-content-center items-center justify-center text-white text-2xl font-bold rounded-lg">
+                  <video src="mnetrecording.mp4" style="width: auto; height: 100%; border-radius: 10px;" class="drop-shadow m-auto" autoplay loop></video>
+               </div>
+            </div>
+         </div>
+         <div id="project2" class="h-full hidden w-full rounded-xl">
+            <!-- Container -->
+            <div class="w-full h-full project-content mx-auto p-4 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+               <!-- Box 2 (Top Right) -->
+               <div class=" gap-2 flex flex-col place-content-center project-content p-6 rounded-lg col-span-1 lg:col-span-1">
+                  <h1 class="text-white poppins-semibold text-base m-auto mb-2 md:mb-6 text-center   mt-0 lg:text-3xl">
+                     Prohealth Community Care Services
+                  </h1>
+                  <a href="https://prohealth.care" class="inline-flex  items-center justify-center p-5 text-base font-medium text-white hover:brightness-125 rounded-lg bg-gradient-to-tr from-indigo-500 to-indigo-900 ">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 invert mr-4" viewBox="0 0 512 512">
+                        <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/>
+                     </svg>
+                     <span class="w-full poppins-light">check it out</span>
+                     <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                     </svg>
+                  </a>
+               </div>
+               <!-- Box 3 (Top Right under Box 2) -->
+               <!-- Box 4 (Bottom Left) -->
+               <div class="p-6 project-content rounded-lg col-span-1 md:col-span-3 lg:col-span-3 flex place-content-center">
+                  <img src="img/prohealth.png" class="rounded-[10px] m-auto">
+               </div>
+            </div>
+         </div>
+         <div id="project3" class="hidden h-full w-full flex place-content-center rounded-xl">
+           <p class="text-white text-4xl poppins-bold m-auto">
+            coming soon
+           </p>
+         </div>
+         <div class="absolute bottom-4 ">
+            <div class="bg-white drop-shadow w-auto p-2 px-4 h-12 gap-2 rounded-xl  flex place-content-center">
+               <div id="btn1" style="width: 2rem;" class="h-3 w-3 bg-black m-auto  rounded-full cursor-pointer"></div>
+               <div id="btn2" class="h-3 w-3 bg-black m-auto  rounded-full cursor-pointer"></div>
+               <div id="btn3" class="h-3 w-3 bg-black m-auto  rounded-full cursor-pointer"></div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Selecting the mobile menu button, menu, close button, and wrapper
-    var mobileMenuButton = document.getElementById('mobile-menu-button');
-    var mobileMenu = document.getElementById('mobile-menu');
-    var closeButton = document.getElementById('close-button');
-    var wrapper = document.getElementById('wrapper'); // Add this line
-
-    mobileMenu.style.transform = 'translateX(100%)';
-    wrapper.style.display = 'none'; // Add this line
-
-    // Adding a click event listener to the mobile menu button
-    mobileMenuButton.addEventListener('click', function () {
-      // Sliding in the mobile menu from the right
-      mobileMenu.style.transform = 'translateX(0)';
-      wrapper.style.display = 'block'; // Show the wrapper
-      document.body.style.overflow = 'hidden';
-    });
-
-    // Adding a click event listener to the close button
-    closeButton.addEventListener('click', function () {
-      // Sliding out the mobile menu to the right
-      mobileMenu.style.transform = 'translateX(100%)';
-      wrapper.style.display = 'none'; // Hide the wrapper
-      document.body.style.overflow = 'auto';
-    });
-  });
+   // Get elements
+   
+   const project1 = document.getElementById('project1');
+   const project2 = document.getElementById('project2');
+   const project3 = document.getElementById('project3');
+   
+   const btn1 = document.getElementById('btn1');
+   const btn2 = document.getElementById('btn2');
+   const btn3 = document.getElementById('btn3');
+   
+   // GSAP Animation Helper for circle to line
+   const circleToLine = (btn) => {
+     gsap.to(btn, { width: "2rem", borderRadius: "1rem", duration: 0.5 });
+   };
+   
+   const lineToCircle = (btn) => {
+     gsap.to(btn, { width: "0.75rem", borderRadius: "50%", duration: 0.5 });
+   };
+   
+   // Animate project content elements
+   const animateProjectContentIn = (projectDiv) => {
+     const elements = projectDiv.querySelectorAll('.project-content');
+     gsap.fromTo(elements, { opacity: 0, y: 50 }, { opacity: 1, y: 0, stagger: 0.2, duration: 0.6 });
+   };
+   
+   const hideProjectContent = (projectDiv) => {
+     const elements = projectDiv.querySelectorAll('.project-content');
+     gsap.to(elements, { opacity: 0, y: -50, duration: 0.6 });
+   };
+   
+   hideProjectContent(project3);
+   // Button Click Events
+   btn1.addEventListener('click', () => {
+     hideProjectContent(project2);
+     hideProjectContent(project3);
+   
+     project1.classList.remove('hidden');
+     project2.classList.add('hidden');
+     project3.classList.add('hidden');
+     animateProjectContentIn(project1);
+   
+     circleToLine(btn1);
+     lineToCircle(btn2);
+     lineToCircle(btn3);
+   });
+   
+   btn2.addEventListener('click', () => {
+     hideProjectContent(project1);
+     hideProjectContent(project3);
+   
+     project2.classList.remove('hidden');
+     project1.classList.add('hidden');
+     project3.classList.add('hidden');
+     animateProjectContentIn(project2);
+   
+     circleToLine(btn2);
+     lineToCircle(btn1);
+     lineToCircle(btn3);
+   });
+   
+   btn3.addEventListener('click', () => {
+     hideProjectContent(project1);
+     hideProjectContent(project2);
+   
+     project3.classList.remove('hidden');
+     project1.classList.add('hidden');
+     project2.classList.add('hidden');
+     animateProjectContentIn(project3);
+   
+     circleToLine(btn3);
+     lineToCircle(btn1);
+     lineToCircle(btn2);
+   });
+   
+   // Close menu event
+   
 </script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/c27c14d9cd.js" crossorigin="anonymous"></script>
+<script>
+   // Get elements
+   const openMenu = document.getElementById('openProjectsMenu');
+   const fullScreenMenu = document.getElementById('fullScreenMenu');
+   const closeMenu = document.getElementById('closeMenu');
+   const overlay = document.getElementById('overlay');
+   
+   // Function to open the full-screen menu with GSAP animation
+   openMenu.addEventListener('click', () => {
+      // Show the overlay
+      overlay.classList.remove('hidden');
+      // Show the full-screen menu
+      fullScreenMenu.classList.remove('hidden');
+   
+      // Animate overlay fade in
+      gsap.fromTo(overlay, 
+         { opacity: 0 }, 
+         { opacity: 1, duration: 0.5 }
+      );
+      
+   
+      // Animate full-screen menu
+      gsap.fromTo(fullScreenMenu, 
+         { opacity: 0, top: 100, filter: "blur(10px)" }, // Starting state (blurred and invisible)
+         { duration: 0.5, top: 0, opacity: 1, filter: "blur(0px)", ease: "power2.out" } // Ending state (visible and clear)
+      );
+   });
+   
+   // Function to close the full-screen menu and overlay with GSAP animation
+   const closeFullScreenMenu = () => {
+      // Animate overlay fade out
+      gsap.to(overlay, {
+         opacity: 0,
+         duration: 0.5,
+         onComplete: () => overlay.classList.add('hidden') // Hide overlay after fade-out
+      });
+   
+      // Animate full-screen menu fade out
+      gsap.to(fullScreenMenu, {
+         duration: 0.5,
+         opacity: 0,
+         top: 100,
+         filter: "blur(10px)",
+         ease: "power2.in",
+         onComplete: () => fullScreenMenu.classList.add('hidden') // Hide full-screen menu after animation
+      });
+   };
+   
+   // Event listener for close button
+   closeMenu.addEventListener('click', closeFullScreenMenu);
+   
+   // Event listener for overlay click to close the menu
+   overlay.addEventListener('click', closeFullScreenMenu);
+   
+   // Close the full-screen menu on pressing the Escape key
+   document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+         closeFullScreenMenu();
+      }
+   });
+</script>
+<script>
+   //console.clear();
+   const randomX = random(-400, 400);
+   const randomY = random(-200, 200);
+   const randomDelay = random(0, 50);
+   const randomTime = random(6, 12);
+   const randomTime2 = random(5, 6);
+   const randomAngle = random(-30, 150);
+   
+   const blurs = gsap.utils.toArray(".blur");
+   blurs.forEach((blur) => {
+   gsap.set(blur, {
+    x: randomX(-1),
+    y: randomX(1),
+    rotation: randomAngle(-1)
+   });
+   
+   moveX(blur, 1);
+   moveY(blur, -1);
+   rotate(blur, 1);
+   });
+   
+   function rotate(target, direction) {
+   gsap.to(target, randomTime2(), {
+    rotation: randomAngle(direction),
+    // delay: randomDelay(),
+    ease: Sine.easeInOut,
+    onComplete: rotate,
+    onCompleteParams: [target, direction * -1]
+   });
+   }
+   
+   function moveX(target, direction) {
+   gsap.to(target, randomTime(), {
+    x: randomX(direction),
+    ease: Sine.easeInOut,
+    onComplete: moveX,
+    onCompleteParams: [target, direction * -1]
+   });
+   }
+   
+   function moveY(target, direction) {
+   gsap.to(target, randomTime(), {
+    y: randomY(direction),
+    ease: Sine.easeInOut,
+    onComplete: moveY,
+    onCompleteParams: [target, direction * -1]
+   });
+   }
+   
+   function random(min, max) {
+   const delta = max - min;
+   return (direction = 1) => (min + delta * Math.random()) * direction;
+   }
+</script>
+<script>
+   // Music Menu Controls
+   const openMusicMenu = document.getElementById('openMusicMenu');
+   const fullScreenMusicMenu = document.getElementById('fullScreenMusicMenu');
+   const closeMusicMenu = document.getElementById('closeMusicMenu');
+   
+   
+   
+   // Reuse the same animation helpers
+   const animateMusicContentIn = (sectionDiv) => {
+       const elements = sectionDiv.querySelectorAll('.music-content');
+       gsap.fromTo(elements, 
+           { opacity: 0, y: 50 }, 
+           { opacity: 1, y: 0, stagger: 0.2, duration: 0.6 }
+       );
+   };
+   
+   const hideMusicContent = (sectionDiv) => {
+       const elements = sectionDiv.querySelectorAll('.music-content');
+       gsap.to(elements, { opacity: 0, y: -50, duration: 0.6 });
+   };
+   
+   
+   // Open Music Menu
+   openMusicMenu.addEventListener('click', () => {
+       overlay.classList.remove('hidden');
+       fullScreenMusicMenu.classList.remove('hidden');
+   
+       gsap.fromTo(overlay, 
+           { opacity: 0 }, 
+           { opacity: 1, duration: 0.5 }
+       );
+   
+       gsap.fromTo(fullScreenMusicMenu, 
+           { opacity: 0, top: 100, filter: "blur(10px)" },
+           { duration: 0.5, top: 0, opacity: 1, filter: "blur(0px)", ease: "power2.out" }
+       );
+   });
+   
+   // Close Music Menu
+   const closeMusicMenuHandler = () => {
+       gsap.to(overlay, {
+           opacity: 0,
+           duration: 0.5,
+           onComplete: () => overlay.classList.add('hidden')
+       });
+   
+       gsap.to(fullScreenMusicMenu, {
+           duration: 0.5,
+           opacity: 0,
+           top: 100,
+           filter: "blur(10px)",
+           ease: "power2.in",
+           onComplete: () => fullScreenMusicMenu.classList.add('hidden')
+       });
+   };
+   
+   closeMusicMenu.addEventListener('click', closeMusicMenuHandler);
+   
+   // Update the existing overlay click handler to close both menus
+   overlay.addEventListener('click', () => {
+       closeFullScreenMenu();
+       closeMusicMenuHandler();
+   });
+   
+   // Update the escape key handler to close both menus
+   document.addEventListener('keydown', (event) => {
+       if (event.key === 'Escape') {
+           closeFullScreenMenu();
+           closeMusicMenuHandler();
+       }
+   });
+</script>
+<script>
+   // Define your song IDs here
+   const songIds = [
+       '5RHaCuMPOwvmsAXjFwpKCm', 
+       '1gKwMVm5T4IWMerM9oMViG',  
+       '1tchYcaMpZEBebytCouffT',
+       '47W5CCF4dIqzWw0MQouDzW',
+       '0Is7RCYWGw1ZCtOxKMM45S',
+       '7nK4xPHNoCBe8kqmUUlNXd',
+       '6gcYnfwgjMPNaPfmTsyLxe',
+       '6h5hY0TvkcCk9NlJOqKeQm',
+       '6abP8gf1RtuRzj24KQzc0K',
+       '3YwB5enenHuNsUDJr0m5m3',
+       '4j4xSGd5CbUva1OCfoPLyP',
+       '1SKo3Em0D3H80mSJVB879H',
+       '6f9A1U3u4v1ZBtgQxzRrkt',
+       '5GsO2Lrh0SECHqmq1GWe54',
+       '365tvvglH2KSYkzoPkevN2',
+       '7EX73jBaDDHMaNfmEJti8M',
+       '6YDjOtQVpF9s0S8rlQH914',
+       
+          
+   ];
+   
+   function loadSongs() {
+       const songsGrid = document.getElementById('songsGrid');
+       songsGrid.innerHTML = '';
+   
+       songIds.forEach(songId => {
+           
+           if (songId) {  // Only create embed if songId is not empty
+               const embedDiv = document.createElement('div');
+               embedDiv.className = 'spotify-embed';
+               embedDiv.innerHTML = `
+                   <iframe src="https://open.spotify.com/embed/track/${songId}"
+                     class="music-content"
+                       width="100%" 
+                       height="152" 
+                       frameborder="0" 
+                       allowtransparency="true" 
+                       allow="encrypted-media"
+                       allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                       >
+                   </iframe>
+               `;
+               songsGrid.appendChild(embedDiv);
+           }
+       });
+   }
+   
+   loadSongs();
+</script>

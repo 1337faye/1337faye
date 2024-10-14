@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta title="Nextplayer"> 
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="bg-slate-900 flex place-content-center h-screen">
+        <div id="player" class="drop-shadow-2xl bg-yellow-300 bg-opacity-75 hover:bg-opacity-100 duration-300 m-auto w-96 h-96 rounded-3xl bg  flex">
+            <div id="album-art" class="duration-300 place-content-center border-2 border-yellow-800 h-96 w-96 rounded-3xl scale-[0.90] flex flex-col gap-0 bg-[url('Webplayer/thiswillpass.jpeg')] bg-cover opacity-75">
+                <div id="text" class="m-auto flex flex-col place-content-center">
+                    <div class="drop-shadow-2xl order-1 translate-y-16 m-auto bg-black text-white p-4 rounded-2xl text-center bg-opacity-90 place-content-center">
+                        <h1 class="font-bold">  
+                            This will pass
+                        </h1>
+                        <p class="">
+                            Home - Falling Into Place
+                        </p>
+                    </div>
+                    <div id="play-indicator" class="hidden drop-shadow-2xl scale-0 duration-500 order-2 h-16 w-16= bg-opacity-90 rounded-full m-auto align-middle">
+                        <div class="cursor-move fa-solid fa-music h-16 w-16 ml-6 mt-6 invert">
+
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+                <div id="progress" class="h-8 w-64 mb-0 m-auto">
+                    <div id="progress-bar" class="h-3 w-64 bg-slate-900 bg-opacity-90 rounded-full border-2 border-transparent ">
+                        <div id="slider" class="h-8 w-8 bg-violet-600 rounded-full -ml-1 m-0 border-2 border-white -translate-y-[12px]">
+
+                        </div>
+                        <div id="progress-text" class="flex mx-1">
+                            <div class="">
+                                <h1 id="elapsed" class="bg-violet-700 -ml-2 p-2 rounded-xl font-bold text-white drop-shadow-xl absolute">
+                                    0:00
+                                </h1>
+                            </div>
+                            
+                            <h1 id="duration" class="bg-violet-700 p-2 rounded-xl font-bold text-white drop-shadow-xl ml-52">
+                                3:32
+                            </h1>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="play-button" onclick="change()" class="mt-0 bg-slate-700 backdrop-blur-xl duration-300 hover:bg-opacity-90 bg-opacity-80 h-24 w-24 rounded-full m-auto mb-0 translate-y-12 flex" >
+
+                    <div id="icon" class="duration-300 hover:scale-[1.75] fa-solid fa-play m-auto place-content-center invert scale-150">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
+<!----Play/Pause-->
+<script>
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+var audio = new Audio('https://faye.lol/Webplayer/music/thiswillpass.mp3');
+var isclicked = 1
+var colon = ":"
+var currentseconds =  Math.floor(audio.currentTime % 60)
+var currentseconds =  currentseconds.toString()
+var currentminutes =  Math.floor(audio.currentTime / 60)
+var currentminutes =  currentminutes.toString()
+var current = currentminutes + colon + currentseconds
+function change(){
+    if (isclicked == 1) {
+        let totalminutes = Math.floor(audio.duration / 60)
+        let totalseconds = Math.floor(audio.duration % 60)
+        document.getElementById("album-art").classList.remove('scale-[0.90]');
+        document.getElementById("album-art").classList.add('scale-[0.88]');
+        document.getElementById("icon").classList.remove('fa-play');
+        document.getElementById("icon").classList.add('fa-pause');
+        document.getElementById("play-indicator").classList.add('scale-100');
+        document.getElementById("play-indicator").classList.remove('scale-0');
+        audio.play();
+        isclicked = 0
+
+  } else {
+    document.getElementById("album-art").classList.add('scale-[0.90]');
+    document.getElementById("album-art").classList.remove('scale-[0.88]');
+    document.getElementById("icon").classList.add('fa-play');
+    document.getElementById("icon").classList.remove('fa-pause');
+    document.getElementById("play-indicator").classList.remove('scale-100');
+    document.getElementById("play-indicator").classList.add('scale-0');
+    isclicked = 1
+    audio.pause();
+  }
+}
+</script>
+
+<!---Pause checker-->
+<script>
+async function pausechecker() {
+    while (true) {
+        if (audio.paused == false) {
+            document.getElementById("album-art").classList.remove('scale-[0.90]');
+            document.getElementById("album-art").classList.add('scale-[0.88]');
+            document.getElementById("icon").classList.remove('fa-play');
+            document.getElementById("icon").classList.add('fa-pause');
+            document.getElementById("play-indicator").classList.add('scale-100');
+            document.getElementById("play-indicator").classList.remove('scale-0');
+            isclicked = 0
+            await sleep(300)
+        } if (audio.paused == true) {
+            document.getElementById("album-art").classList.add('scale-[0.90]');
+            document.getElementById("album-art").classList.remove('scale-[0.88]');
+            document.getElementById("icon").classList.remove('fa-pause');
+            document.getElementById("icon").classList.add('fa-play');
+            document.getElementById("play-indicator").classList.remove('scale-100');
+            document.getElementById("play-indicator").classList.add('scale-0');
+            isclicked = 1
+            await sleep(300)
+        }
+    }
+    
+}
+
+pausechecker()       
+        
+
+</script>
+<!----Increment timer-->
+<script>
+var colon = ":"
+   async function time(){
+    while(true){
+        var currentminutes =  Math.floor(audio.currentTime / 60)
+        var currentminutes =  currentminutes.toString()
+        var currentseconds =  Math.floor(audio.currentTime % 60)
+        var currentseconds =  currentseconds.toString() 
+        if (currentseconds < 10) {
+            var currentseconds = "0" + currentseconds;
+            var current = currentminutes + colon + currentseconds
+            document.getElementById("elapsed").innerHTML = (current)
+            await sleep(300)
+        } else {
+        var currentminutes =  Math.floor(audio.currentTime / 60)
+        var currentminutes =  currentminutes.toString()
+        var currentseconds =  Math.floor(audio.currentTime % 60)
+        var currentseconds =  currentseconds.toString() 
+        var current = currentminutes + colon + currentseconds
+        document.getElementById("elapsed").innerHTML = (current)
+        await sleep(300);
+        }
+        
+        
+    }
+
+}
+
+time()     
+
+</script>
+
+<!--Seek>bar-->
+<script>
+async function elapercent() {
+    while (true) {
+    var multiplier = 100 / audio.duration
+    var percentelapsed = (multiplier * audio.currentTime)
+    var translateslider = "translate(" + percentelapsed * 2.3 + 'px'+ ','+ '-12px' + ')'
+    console.log(translateslider)
+    document.getElementById("slider").style.transform = translateslider;
+    await sleep(50)
+    }
+}
+
+elapercent()
+</script>

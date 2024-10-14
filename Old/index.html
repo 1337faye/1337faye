@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="theme-color" content="#230293">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faye - Home</title>
+  <meta name="title" content="Faye - Home">
+  <meta name="description" content="I'm Faye, a passionate web developer on a mission to create extraordinary and captivating websites. I'm dedicated to delivering exceptional solutions that exceed clients' expectations.">
+  <meta name="keywords" content="faye, web development, web, fiverr, html, css js, tailwind, PHP, front end, full stack">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="days">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="outputstyles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+        @font-face {
+            font-family: 'Stretch Sans';
+            src: url('STRRETCH-SANS.otf') format('opentype');
+        }
+
+        .custom-shape-divider-bottom-1704353111 {
+    position: absolute;
+    
+    left: 0;
+    width: 100%;
+    min-width: 1000px;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1704353111 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.6px);
+    height: 150px;
+  }
+
+  .custom-shape-divider-bottom-1704353111 .shape-fill {
+    fill: #0F172A;
+  }
+        
+        
+  </style>
+  <style>
+
+          #floatingdiv {
+            transition: transform 0.3s ease-out;
+          }
+  </style>
+  <style>
+          #floatingdiv {
+            transition: transform 0.3s ease-out;
+          }
+  </style>
+</head>
+<body style="background-image: url(svg.webp);" class="overflow-x-hidden w-screen bg-auto bg-[#0e0085]">
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const loader = document.getElementById("loader");
+        loader.style.opacity = 1;
+    
+        function fadeOut() {
+          loader.style.opacity -= 0.1;
+          if (loader.style.opacity <= 0) {
+            loader.style.display = "none";
+          } else {
+            setTimeout(requestAnimationFrame(fadeOut), 500);
+          }
+        }
+    
+        setTimeout(fadeOut, 500);
+      });
+  </script>
+  <div id="loader" class="h-screen w-screen bg-black z-[1000] fixed flex flex-col gap-0 place-content-center">
+    <h5 id="changeFontText" style="font-family: Stretch Sans" class="m-auto text-4xl font-bold text-white uppercase animate-pulse">Faye</h5>
+  </div>
+  <header class="absolute inset-x-0 top-0 max-w-[100vw] overflow-x-hidden z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5"><span class="sr-only">faye.lol</span></a> <a href="index.html" style="font-family: 'Stretch Sans';" id="changeFontText" class="transition-all duration-500 tracking-wide font-bold text-white hover:tracking-[1rem] changeFontText">FAYE</a>
+      </div>
+      <div class="flex lg:hidden">
+        <button id="mobile-menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 bg-black bg-opacity-25 text-white"><span class="sr-only">Open main menu</span> <svg class="z-20 w-6 h-6" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg></button>
+      </div>
+      <div class="hidden font-bold tracking-wide lg:flex lg:gap-x-12">
+        <a href="portfolio.html" class="text-sm font-semibold leading-6 text-white">PORTFOLIO</a> <a href="resume.html" class="text-sm font-semibold leading-6 text-white">RESUME</a> <a href="music.html" class="text-sm font-semibold leading-6 text-white">MUSIC</a> <a href="https://www.fiverr.com/s/33p4Dm" class="text-sm font-semibold leading-6 text-white">FIVERR</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="mailto:faye@faye.lol" class="text-sm font-semibold leading-6 text-white">Get In Touch <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+    <div id="wrapper" class="overflow-x-hidden h-screen max-w-[100vw]">
+      <div id="mobile-menu" style="transform: translateX(100%); transition: all 500ms cubic-bezier(0.900, 0.005, 0.000, 1.010);" class="absolute top-0 z-40 w-screen h-screen overflow-x-hidden duration-500 ease-in-out mobile-menu lg:hidden -mt-18 transform-y-16" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 z-0"></div>
+        <div class="fixed inset-y-0 right-0 z-0 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5"><span class="sr-only">Menu</span>
+            <h1 style="font-family: 'Stretch Sans';">Menu</h1></a> <button id="close-button" type="button" class="menu-button -m-2.5 fa-solid fa-x w-8 h-8 rounded-md p-2.5 text-black"><span class="text-black sr-only">Close menu</span></button>
+          </div>
+          <div class="flow-root mt-6">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="py-6 space-y-2">
+                <a href="portfolio.html" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50">PORTFOLIO</a> <a href="resume.html" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50">RESUME</a> <a href="music.html" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50">MUSIC</a> <a href="https://www.fiverr.com/s/33p4Dm" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50">FIVERR</a>
+              </div>
+              <div class="py-6">
+                <a href="mailto:faye@faye.lol" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Get In Touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="">
+    <div class="gap-4 p-16 overflow-hidden bg-fixed bg-right bg-cover backdrop-blur-xl" style="height: 100vh; min-height: 700px;max-height: 1000 px;background-image: url(svg.webp);" id="hero-section">
+      <h1 class="font-bold text-5xl lg:text-6xl m-auto text-right sm:text-center text-white max-w-3xl mt-16 min-[500px]:mt-24">I develop <span id="changeFontText2" style="font-family: 'Times New Roman', Times, serif;" class="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-transparent">websites</span><br>
+      and <span id="changeFontText" style="font-family: 'Times New Roman', Times, serif;" class="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-violet-400 to-gray-300 bg-clip-text text-transparent drop-shadow-xl">interactive</span> experiences.</h1>
+      <h2 class="font-semibold mt-2 text-xs sm:text-center text-right bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-transparent"><a href="music.html">(i also make music)</a></h2>
+      <div class="flex justify-center w-48 p-4 m-auto my-8 text-right transition-colors duration-300 translate-x-20 bg-white rounded-lg hover:brightness-90 sm:translate-x-0 sm:text-center">
+        <div class="bg-white hover:brightness-90 bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-transparent rounded-lg">
+          <a class="block font-bold" href="mailto:faye@faye.lol">Get In Touch</a>
+        </div>
+      </div>
+      <div style="z-index: 9999999999;" class=" h-0 -translate-x-[30vw] -translate-y-[180px] md:translate-y-[-100px] md:translate-x-[35vw] xl:translate-x-[525px] xl:translate-y-[-50px] bottom-64 md:right-[50px] xl:right-[200px] z-50 flex flex-col"><a href="https://monashemerging.tech/" class="z-50 mt-6 text-xs font-bold text-center text-white translate-y-8 md:translate-x-10">like this</a> <a href="https://monashemerging.tech/" class="z-60 bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-pink-500 via-purple-400 to-gray-800 bg-clip-text text-xs text-transparent text-center font-bold text-xl md:translate-x-10 translate-y-8">(monashemerging.tech)</a> <img alt="Arrow pointing at web page" src="arrow.svg" class="invert rotate-[90deg] lg:rotate-180 h-32 translate-y-2" style="z-index: 9999;"></div>
+      <div id="floatingdiv" class="w-[60rem] h-auto border-white sm:w-auto lg:w-[60rem] m-auto col-span-2 rounded-2xl pt-1 md:pt-4 p-2 gradient-div -mb-1" style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); ; box-shadow: 0 30px 400px 8px rgba(255, 255, 255, 0.2);">
+        <div class="flex h-8 gap-2 pb-1 ml-0 w-max place-content-center md:mb-4">
+          <div class="w-5 h-5 m-auto ml-4 bg-red-500 rounded-full"></div>
+          <div class="w-5 h-5 m-auto bg-yellow-500 rounded-full"></div>
+          <div class="w-5 h-5 m-auto bg-green-500 rounded-full"></div>
+        </div>
+        <div class="relative inset-0 w-full h-full overflow-hidden bg-opacity-25 rounded-t-none rounded-b-xl">
+          <a href="https://monashemerging.tech" target="_blank" aria-label="Monsh Nexus for Emerging Technology - Website"><iframe src="https://monashemerging.tech" class="w-full min-h-[500px] rounded-2xl" style="border: none;"></iframe></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="relative overflow-hidden bg-gradient-to-br from-[#0e0085] to-violet-600 px-6 py-24 sm:py-32 lg:px-8">
+    <div class="max-w-2xl mx-auto text-white lg:max-w-4xl">
+      <img class="w-48 mx-auto" src="images/ftg-logo.webp" alt="For The Girls Logo">
+      <figure class="mt-10">
+        <blockquote class="text-xl font-semibold leading-8 text-center text-white sm:text-2xl sm:leading-9">
+          <p>“Faye has been amazing to work with, I am really happy with my website. The ongoing support has been awesome. Faye listened to every step of the way and tested and tweaked functions to get everything working perfectly, I will definitely be returning with my next project. ”</p>
+        </blockquote>
+        <div class="flex justify-center mt-2">
+          <svg class="w-6 h-6 text-yellow-500" fill="currentcolor" viewbox="0 0 20 20">
+          <path d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z"></path></svg> <svg class="w-6 h-6 text-yellow-500" fill="currentcolor" viewbox="0 0 20 20">
+          <path d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z"></path></svg> <svg class="w-6 h-6 text-yellow-500" fill="currentcolor" viewbox="0 0 20 20">
+          <path d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z"></path></svg> <svg class="w-6 h-6 text-yellow-500" fill="currentcolor" viewbox="0 0 20 20">
+          <path d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z"></path></svg> <svg class="w-6 h-6 text-yellow-500" fill="currentcolor" viewbox="0 0 20 20">
+          <path d="M10 12.585l-4.95 3.563 1.9-5.85L2.1 7.022l5.95-.433L10 1l2.95 5.589 5.95.433-4.85 3.276 1.9 5.85L10 12.585z"></path></svg>
+          <p class="ml-2 font-bold text-white">5 / 5</p>
+        </div>
+        <figcaption class="mt-10 mb-16">
+          <img class="w-10 h-10 mx-auto rounded-full" src="/images/serapfp.webp" alt="Sera's profile picture">
+          <div class="flex items-center justify-center mt-4 space-x-3 text-base">
+            <div class="font-semibold text-white">
+              Sera
+            </div><svg viewbox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-white">
+            <circle cx="1" cy="1" r="1"></circle></svg>
+            <div class="text-white">
+              For The Girls
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="custom-shape-divider-bottom-1704353111">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 120" preserveaspectratio="none">
+      <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path></svg>
+    </div>
+  </section>
+  <section id="about" class="px-6 py-24 bg-slate-900 sm:py-32 lg:px-8">
+    <div class="max-w-2xl mx-auto text-white lg:max-w-4xl">
+      <h2 class="mb-8 text-4xl font-bold">About Me</h2>
+      <div class="flex flex-col items-center justify-between md:flex-row">
+        <div class="md:w-1/2">
+          <p class="mb-8 text-lg leading-7">I'm Faye, a passionate web developer on a mission to create extraordinary and captivating websites. I'm dedicated to delivering exceptional solutions that exceed clients' expectations.</p>
+          <p class="text-lg leading-7">Specializing in both front-end and full-stack development, I harness the power of modern technologies like HTML5, Tailwind, and PHP to craft immersive and interactive user experiences. Let's collaborate and transform your ideas into something truly remarkable.</p>
+        </div>
+        <div class="mt-10 md:w-1/2 md:mt-0"><img src="https://fiverr-res.cloudinary.com/image/upload/t_profile_original,q_auto,f_auto/v1/attachments/profile/photo/e61b691de9b8b5c7e6dbf4464e08d5a2-1668560406206/54c67376-1f3a-4b06-b849-d1e1b51d81d2.jpg" alt="Faye's Profile Picture" class="w-64 h-64 mx-auto rounded-full md:mx-0"></div>
+      </div>
+    </div>
+  </section>
+  <footer style="background-color: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class="text-white">
+    <div class="w-full max-w-screen-xl p-4 py-6 mx-auto lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="faye.lol" class="flex items-center"><span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FAYE</span></a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3"></div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© insert current year : <a href="faye.lol" class="hover:underline">faye.lol</a>. No Rights Reserved ):</span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a href="https://discord.com/users/238889021940432906" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"><svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewbox="0 0 21 16">
+            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"></path></svg> <span class="sr-only">Discord community</span></a> <a href="https://github.com/1337faye" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"><svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewbox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"></path></svg> <span class="sr-only">GitHub account</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+          const textElement = document.getElementById('changeFontText');
+          const fonts = ['Arial', 'Times New Roman', 'Verdana'];
+          let currentIndex = 0;
+          let originalFont = textElement.style.fontFamily;
+
+          let intervalId;
+
+          textElement.addEventListener('mouseover', () => {
+            intervalId = setInterval(() => {
+              currentIndex = (currentIndex + 1) % fonts.length;
+              textElement.style.fontFamily = fonts[currentIndex];
+            }, 500);
+          });
+
+          textElement.addEventListener('mouseout', () => {
+            // Stop the font-changing interval when not hovered
+            clearInterval(intervalId);
+            textElement.style.fontFamily = originalFont;
+          });
+  </script> 
+  <script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Selecting the mobile menu button, menu, close button, and wrapper
+    var mobileMenuButton = document.getElementById('mobile-menu-button');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var closeButton = document.getElementById('close-button');
+    var wrapper = document.getElementById('wrapper'); // Add this line
+
+    mobileMenu.style.transform = 'translateX(100%)';
+    wrapper.style.display = 'none'; // Add this line
+
+    // Adding a click event listener to the mobile menu button
+    mobileMenuButton.addEventListener('click', function () {
+      // Sliding in the mobile menu from the right
+      mobileMenu.style.transform = 'translateX(0)';
+      wrapper.style.display = 'block'; // Show the wrapper
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Adding a click event listener to the close button
+    closeButton.addEventListener('click', function () {
+      // Sliding out the mobile menu to the right
+      mobileMenu.style.transform = 'translateX(100%)';
+      wrapper.style.display = 'none'; // Hide the wrapper
+      document.body.style.overflow = 'auto';
+    });
+  });
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&amp;display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c27c14d9cd.js" crossorigin="anonymous"></script>
+</body>
+</html>

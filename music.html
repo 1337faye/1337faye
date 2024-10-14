@@ -1,260 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="theme-color" content="#230293">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Music</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="outputstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c27c14d9cd.js" crossorigin="anonymous"></script>
-  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Songs</title>
     <style>
-        @font-face {
-            font-family: 'Stretch Sans';
-            src: url('STRRETCH-SANS.otf') format('opentype');
+        .blur {
+            position: fixed;
+            width: 1000px;
+            height: 1000px;
+            border-radius: 50%;
+            background: rgba(125, 39, 255, 0.2);
+            filter: blur(100px);
         }
-        
-        
+        .spotify-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+        .spotify-embed {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            padding: 1rem;
+            backdrop-filter: blur(10px);
+        }
     </style>
 </head>
+<body class="bg-black">
+    <section class="overflow-hidden min-h-screen w-screen">
+        <div class="blur -z-50"></div>
+        <div class="blur -z-50"></div>
+        <div class="blur -z-50"></div>
 
-<body class=" bg-cover bg-no-repeat" style="background-image: url(svg.webp);">
-
-
-
-        <section class="min-h-screen bg-cover" style="background-image: url(svg.webp);">
-            <header class="absolute inset-x-0 top-0 max-w-[100vw] overflow-x-hidden  z-50">
-              <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                  const loader = document.getElementById("loader");
-                  loader.style.opacity = 1;
-              
-                  function fadeOut() {
-                    loader.style.opacity -= 0.1;
-                    if (loader.style.opacity <= 0) {
-                      loader.style.display = "none";
-                    } else {
-                      setTimeout(requestAnimationFrame(fadeOut), 500);
-                    }
-                  }
-              
-                  setTimeout(fadeOut, 500);
-                });
-              </script>
-              <div id="loader" class="h-screen w-screen bg-black z-[1000] fixed flex flex-col gap-0 place-content-center">
-                <h1 id="changeFontText" style="font-family: Stretch Sans" class="text-white m-auto uppercase text-4xl font-bold animate-pulse">
-                  Faye
-                </h1>
-                
-              </div>
-                <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-                  <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">faye.lol</span>
-                        <a href="index.html" style="font-family: 'Stretch Sans';" id="changeFontText" class="transition-all duration-500 tracking-wide font-bold text-white hover:tracking-[1rem] changeFontText"> FAYE</a>
-                    </a>
-                  </div>
-                  <div class="flex lg:hidden">
-                    <button id="mobile-menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 bg-black bg-opacity-25 text-white">
-                      <span class="sr-only">Open main menu</span>
-                      <svg class="h-6 w-6 z-20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                      </svg>
-                  </button>
-                  
-                  </div>
-                  <div  class="font-bold tracking-wide hidden lg:flex lg:gap-x-12">
-                    <a href="portfolio.html" class="text-sm font-semibold leading-6 text-white">PORTFOLIO</a>
-                    <a href="resume.html" class="text-sm font-semibold leading-6 text-white">RESUME</a>
-                    <a href="music.html" class="text-sm font-semibold leading-6 text-white">MUSIC</a>
-                    
-                    <a href="https://www.fiverr.com/s/33p4Dm" class="text-sm font-semibold leading-6 text-white">FIVERR</a>
-                  </div>
-                  <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="mailto:faye@faye.lol" class="text-sm font-semibold leading-6 text-white ">Get In Touch <span aria-hidden="true">&rarr;</span></a>
-                  </div>
-                </nav>
-                <!-- Mobile menu, show/hide based on menu open state. -->
-                <div id="wrapper" class="overflow-x-hidden h-screen max-w-[100vw]">
-                <div id="mobile-menu" style="background-color: rgba(255,255,255,0.06);
-                                                                            border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" style="transform: translateX(100%); transition: all 500ms cubic-bezier(0.900, 0.005, 0.000, 1.010);" class=" duration-500 ease-in-out mobile-menu absolute overflow-x-hidden  lg:hidden -mt-18 transform-y-16 h-screen w-screen top-0 z-40" role="dialog" aria-modal="true">
-                  <!-- Background backdrop, show/hide based on slide-over state. -->
-                  <div class="fixed inset-0 z-0"></div>
-                  <div class="fixed inset-y-0 right-0 z-0 w-full overflow-y-auto  bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div class="flex items-center justify-between">
-                      <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Menu</span>
-                        <h1 style="font-family: 'Stretch Sans';">Menu</h1>
-                      </a>
-                      <button id="close-button"  type="button" class="menu-button -m-2.5 fa-solid fa-x w-8 h-8   rounded-md p-2.5 text-black">
-                        <span class="sr-only text-black">Close menu</span>
-                       
-                      </button>
-                    
-                    
-                    </div>
-                    <div class="mt-6 flow-root">
-                      <div class="-my-6 divide-y divide-gray-500/10">
-                        <div class="space-y-2 py-6">
-                          <a href="portfolio.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">PORTFOLIO</a>
-                          <a href="resume.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">RESUME</a>
-                          <a href="music.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">MUSIC</a>
-          
-                          <a href="https://www.fiverr.com/s/33p4Dm" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">FIVERR</a>
-                        </div>
-                        <div class="py-6">
-                          <a href="mailto:faye@faye.lol" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Get In Touch</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </header>
-
-       <div  class="w-screen min-h-screen bg-black p-8   bg-opacity-25 backdrop-blur-xl mt-16">
-         
-        <h1 class="text-white font-bold text-3xl py-4 text-center">My Music</h1>
-        <h2 class="pb-4 m-auto text-center text-white text-xs"> (some embeds seem to be broken, it's a spotify issue with new releases)</h2>
-<!---ICONS-->
-<div class="m-auto flex place-content-center gap-4 flex-wrap">
-
-    <a href="https://open.spotify.com/artist/20ZFJndFVBFx0pQ6owonDB?si=jKNNfKS3TkWPDmwR-5gQEg" class="hover:brightness-90 bg-opacity-25 bg-green-500 px-4 py-2 font-semibold text-white place-content-center inline-flex items-center space-x-2 rounded-md">
-        <p class=" fa-brands fa-spotify text-center"></p>
-        <span>Spotify</span>
-    </a>
-    <a href="https://www.youtube.com/channel/UClOlJVIrJIipz6gqfWNpCGA" class="hover:brightness-90 bg-opacity-25 bg-red-500 px-4 py-2 font-semibold text-white place-content-center inline-flex items-center space-x-2 rounded-md">
-        <p class=" fa-brands fa-youtube text-center"></p>
-        <span>YouTube</span>
-    </a>
-    <a href="https://music.apple.com/au/artist/1337faye/1723561046" class="hover:brightness-90 bg-opacity-25 bg-red-600 px-4 py-2 font-semibold text-white place-content-center inline-flex items-center space-x-2 rounded-md">
-        <p class=" fa-brands fa-itunes-note text-center"></p>
-        <span>Apple Music</span>
-
-    </a>
-    
-</div>
-
-
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4">
-
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6abP8gf1RtuRzj24KQzc0K?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4j4xSGd5CbUva1OCfoPLyP?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3YwB5enenHuNsUDJr0m5m3?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1SKo3Em0D3H80mSJVB879H?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe class="" style="border-radius:12px" src="https://open.spotify.com/embed/track/6f9A1U3u4v1ZBtgQxzRrkt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5GsO2Lrh0SECHqmq1GWe54?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/365tvvglH2KSYkzoPkevN2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7EX73jBaDDHMaNfmEJti8M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6YDjOtQVpF9s0S8rlQH914?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div id="songsGrid" class="spotify-grid">
+            <!-- Songs will be populated here -->
         </div>
-    </div>
-     
-                           
-<footer style="background-color: rgba(255,255,255,0.06);
-border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);" class="">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-              <a href="faye.lol" class="flex items-center">
-                  
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FAYE</span>
-              </a>
-          </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        // Define your song IDs here
+        const songIds = [
+            '5RHaCuMPOwvmsAXjFwpKCm', 
+            '1gKwMVm5T4IWMerM9oMViG',  
+            '1tchYcaMpZEBebytCouffT',
+            '47W5CCF4dIqzWw0MQouDzW',
+            '0Is7RCYWGw1ZCtOxKMM45S',
+            '7nK4xPHNoCBe8kqmUUlNXd',
+            '6gcYnfwgjMPNaPfmTsyLxe',
+            '6h5hY0TvkcCk9NlJOqKeQm',
+            '6abP8gf1RtuRzj24KQzc0K',
+            '3YwB5enenHuNsUDJr0m5m3',
+            '4j4xSGd5CbUva1OCfoPLyP',
+            '1SKo3Em0D3H80mSJVB879H',
+            '6f9A1U3u4v1ZBtgQxzRrkt',
+            '5GsO2Lrh0SECHqmq1GWe54',
+            '365tvvglH2KSYkzoPkevN2',
+            '7EX73jBaDDHMaNfmEJti8M',
+            '6YDjOtQVpF9s0S8rlQH914',
             
-      </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© insert current year :  <a href="faye.lol" class="hover:underline">faye.lol</a>. No Rights Reserved ):
-          </span>
-          <div class="flex mt-4 sm:justify-center sm:mt-0">
-              
-              <a href="https://discord.com/users/238889021940432906" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                    </svg>
-                  <span class="sr-only">Discord community</span>
-              </a>
-              
-              <a href="https://github.com/1337faye" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="sr-only">GitHub account</span>
-              </a>
-             
-          </div>
-      </div>
-    </div>
-  </footer>
+               
+        ];
+
+        function loadSongs() {
+            const songsGrid = document.getElementById('songsGrid');
+            songsGrid.innerHTML = '';
+
+            songIds.forEach(songId => {
+                
+                if (songId) {  // Only create embed if songId is not empty
+                    const embedDiv = document.createElement('div');
+                    embedDiv.className = 'spotify-embed';
+                    embedDiv.innerHTML = `
+                        <iframe src="https://open.spotify.com/embed/track/${songId}"
+                            width="100%" 
+                            height="152" 
+                            frameborder="0" 
+                            allowtransparency="true" 
+                            allow="encrypted-media"
+                            allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+                            >
+                        </iframe>
+                    `;
+                    songsGrid.appendChild(embedDiv);
+                }
+            });
+        }
+
+        loadSongs();
+    </script>
+   
 </body>
-
-
-
-
-<script>
-    const textElement = document.getElementById('changeFontText');
-    const fonts = ['Arial', 'Times New Roman', 'Verdana'];
-    let currentIndex = 0;
-    let originalFont = textElement.style.fontFamily;
-  
-    let intervalId;
-  
-    textElement.addEventListener('mouseover', () => {
-      intervalId = setInterval(() => {
-        currentIndex = (currentIndex + 1) % fonts.length;
-        textElement.style.fontFamily = fonts[currentIndex];
-      }, 500);
-    });
-  
-    textElement.addEventListener('mouseout', () => {
-      // Stop the font-changing interval when not hovered
-      clearInterval(intervalId);
-      textElement.style.fontFamily = originalFont;
-    });
-  </script>
-  
-  
-  <style>
-    #floatingdiv {
-      transition: transform 0.3s ease-out;
-    }
-  </style>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Selecting the mobile menu button, menu, close button, and wrapper
-      var mobileMenuButton = document.getElementById('mobile-menu-button');
-      var mobileMenu = document.getElementById('mobile-menu');
-      var closeButton = document.getElementById('close-button');
-      var wrapper = document.getElementById('wrapper'); // Add this line
-  
-      mobileMenu.style.transform = 'translateX(100%)';
-      wrapper.style.display = 'none'; // Add this line
-  
-      // Adding a click event listener to the mobile menu button
-      mobileMenuButton.addEventListener('click', function () {
-        // Sliding in the mobile menu from the right
-        mobileMenu.style.transform = 'translateX(0)';
-        wrapper.style.display = 'block'; // Show the wrapper
-        document.body.style.overflow = 'hidden';
-      });
-  
-      // Adding a click event listener to the close button
-      closeButton.addEventListener('click', function () {
-        // Sliding out the mobile menu to the right
-        mobileMenu.style.transform = 'translateX(100%)';
-        wrapper.style.display = 'none'; // Hide the wrapper
-        document.body.style.overflow = 'auto';
-      });
-    });
-  </script>
-  
+</html>
